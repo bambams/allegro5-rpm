@@ -3,3 +3,32 @@ version 5 of the Allegro game programming library. I'm new to RPM so it
 will probably be slow going trying to get an RPM made, but hopefully I'll
 learn something in the process. Contributors are very welcome!
 
+The way that I'm currently organizing this:
+
+Use rpmdev-setuptree to create your ~/rpm tree if you haven't already:
+
+  $ rpmdev-setuptree
+
+This should leave you with the following directories in ~/rpm:
+
+BUILD
+RPMS
+SOURCES
+SPECS
+SRPMS
+
+Clone this repository to where ever you wish to work on it. I've
+personally got the Allegro source checked out into
+~/src/allegro/${version}, so I've created this repository right next to
+that: ~/src/allegro/rpm.
+
+Then, create an absolute path symbolic link from any .spec files in the
+repository to the SPECS directory of your ~/rpm:
+
+  $ for f in ~/src/allegro/rpm/*.spec; do
+      ln -s $f ~/rpm/SPECS/$(basename $f);
+    done
+
+Note that this is a WIP and doesn't actually build an RPM yet. ;) It's
+that much further away from being good enough to submit to any distros.
+
