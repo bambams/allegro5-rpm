@@ -1,0 +1,5 @@
+This project is intended to provide and maintain an RPM package for
+version 5 of the Allegro game programming library. I'm new to RPM so it
+will probably be slow going trying to get an RPM made, but hopefully I'll
+learn something in the process. Contributors are very welcome!
+
