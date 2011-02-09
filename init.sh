@@ -54,6 +54,10 @@ if [ -f "$src_path" ]; then
         skip_src=1
     else
         echo "SHA1 doesn't match..." 2>&1
+        read -p "Would you like me to fetch the source for you? (Y/n) " answer
+        if [ "$answer" != y -a "$answer" != Y ]; then
+            skip_src=1
+        fi
     fi
 fi
 
