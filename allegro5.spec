@@ -11,7 +11,7 @@ Source:		allegro-5.0.0.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires:	cmake freetype-devel gcc libcurl-devel libjpeg-devel libpng-devel libvorbis-devel make mesa-libGL-devel mesa-libGLU-devel physfs-devel
-Requires:	
+Requires:	freetype-devel libjpeg-devel libpng-devel libvorbis-devel mesa-libGL-devel mesa-libGLU-devel physfs-devel
 
 %description
 
