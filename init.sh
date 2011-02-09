@@ -24,7 +24,7 @@ if [ ! -d .git ]; then
     echo "I'd recommend that you use it as it was intended."
     read -p "Try anyway? (Y/n) " answer
     if [ "$answer" != y -a "$answer" != Y ]; then
-        echo "Aborting..." 2>&1
+        echo "Aborting..." 1>&2
         exit 1
     fi
 fi
@@ -38,22 +38,22 @@ if [ -d "$rpm_tree" ]; then
 fi
 
 if [ ! "$skip_setuptree" == 1 ]; then
-    echo "Setting up rpm tree..." 2>&1
+    echo "Setting up rpm tree..."
     /usr/bin/rpmdev-setuptree
 fi
 
-echo "Creating .spec symlinks in '$rpm_tree/SPECS'..." 2>&1
+echo "Creating .spec symlinks in '$rpm_tree/SPECS'..."
 for f in $root/*.spec; do
     /bin/ln -fs "$f" "$rpm_tree/SPECS/"
 done
 
 if [ -f "$src_path" ]; then
-    echo "Source tarball exists... Checking SHA1..." 2>&1
+    echo "Source tarball exists... Checking SHA1..."
     if [ `/usr/bin/sha1sum "$src_path" | sed -r 's/^([^ ]*).*/\1/'` == "$src_sha1" ]; then
-        echo "SHA1 matches..." 2>&1
+        echo "SHA1 matches..."
         skip_src=1
     else
-        echo "SHA1 doesn't match..." 2>&1
+        echo "SHA1 doesn't match..."
         read -p "Would you like me to fetch the source for you? (Y/n) " answer
         if [ "$answer" != y -a "$answer" != Y ]; then
             skip_src=1
@@ -62,7 +62,7 @@ if [ -f "$src_path" ]; then
 fi
 
 if [ ! "$skip_src" == 1 ]; then
-    echo "Fetching source tarball..." 2>&1
+    echo "Fetching source tarball..."
     /usr/bin/wget -O "$src_path" "$src_url"
 fi
 
