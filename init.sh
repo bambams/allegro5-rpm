@@ -23,7 +23,7 @@ if [ ! -d .git ]; then
     echo "Ummm, I don't see .git here. This script isn't very smart so"
     echo "I'd recommend that you use it as it was intended."
     read -p "Try anyway? (Y/n) " answer
-    if [ "$answer" != 'y' -a "$answer" != 'Y' ]; then
+    if [ "$answer" != y -a "$answer" != Y ]; then
         echo "Aborting..." 2>&1
         exit 1
     fi
@@ -32,7 +32,7 @@ fi
 if [ -d "$rpm_tree" ]; then
     echo "It seems rpm tree '$rpm_tree' already exists..."
     read -p "Would you like me to setup tree anyway? (Y/n) " answer
-    if [ "$answer" != 'y' -a "$answer" != 'Y' ]; then
+    if [ "$answer" != y -a "$answer" != Y ]; then
         skip_setuptree=1
     fi
 fi
