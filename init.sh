@@ -15,7 +15,8 @@ fi
 if [ "`pwd`" != "$root" ]; then
     echo "This script is designed to be used from the root of the " 1>&2
     echo "project. You can override that path by passing an " 1>&2
-    echo "argument to the script." 1>&2
+    echo "argument to the script. For example:" 1>&2
+    echo "  ./init.sh `pwd`" 1>&2
     exit 1
 fi
 
