@@ -29,6 +29,12 @@ repository to the SPECS directory of your ~/rpm:
       ln -s $f ~/rpm/SPECS/$(basename $f);
     done
 
+Download the source tarball for Allegro and stick it in the ~/rpm/SOURCES
+directory.
+
+Or, just execute the included init.sh script, which will do all
+of these things for you.
+
 Note that this is a WIP and doesn't actually build an RPM yet. ;) It's
 that much further away from being good enough to submit to any distros.
 
