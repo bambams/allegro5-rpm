@@ -10,8 +10,8 @@ URL:		http://liballeg.org/
 Source:		allegro-5.0.0.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-BuildRequires:	cmake freetype-devel gcc libcurl-devel libjpeg-devel libpng-devel libvorbis-devel make mesa-libGL-devel mesa-libGLU-devel physfs-devel
-Requires:	freetype-devel libjpeg-devel libpng-devel libvorbis-devel mesa-libGL-devel mesa-libGLU-devel physfs-devel
+BuildRequires:	alsa-lib-devel cmake dumb-dev flac-devel freetype-devel gcc gtk2-devel libcurl-devel libjpeg-devel libpng-devel libvorbis-devel make mesa-libGL-devel mesa-libGLU-devel physfs-devel pulseaudio-libs-devel
+Requires:	alsa-lib-devel dumb-dev flac-devel freetype-devel gtk2-devel libjpeg-devel libpng-devel libvorbis-devel mesa-libGL-devel mesa-libGLU-devel physfs-devel pulseaudio-libs-devel
 
 %description
 
