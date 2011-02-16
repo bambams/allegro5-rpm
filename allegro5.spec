@@ -198,4 +198,152 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 
 
+%package devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-font
+Summary:	
+Group:		
+%description
+
+
+%package addon-font-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-acodec
+Summary:	
+Group:		
+%description
+
+
+%package addon-acodec-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-audio
+Summary:	
+Group:		
+%description
+
+
+%package addon-audio-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-color
+Summary:	
+Group:		
+%description
+
+
+%package addon-color-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-dialog
+Summary:	
+Group:		
+%description
+
+
+%package addon-dialog-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-font
+Summary:	
+Group:		
+%description
+
+
+%package addon-font-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-image
+Summary:	
+Group:		
+%description
+
+
+%package addon-image-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-main
+Summary:	
+Group:		
+%description
+
+
+%package addon-main-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-memfile
+Summary:	
+Group:		
+%description
+
+
+%package addon-memfile-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-physfs
+Summary:	
+Group:		
+%description
+
+
+%package addon-physfs-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-primitives
+Summary:	
+Group:		
+%description
+
+
+%package addon-primitives-devel
+Summary:	
+Group:		
+%description
+
+
+%package addon-ttf
+Summary:	
+Group:		
+%description
+
+
+%package addon-ttf-devel
+Summary:	
+Group:		
+%description
 
