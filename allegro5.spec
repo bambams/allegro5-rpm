@@ -205,20 +205,6 @@ Group:
 
 %files devel
 
-%package addon-font
-Summary:	
-Group:		
-%description addon-font
-
-%files addon-font
-
-%package addon-font-devel
-Summary:	
-Group:		
-%description addon-font-devel
-
-%files addon-font-devel
-
 %package addon-acodec
 Summary:	
 Group:		
