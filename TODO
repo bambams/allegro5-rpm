@@ -1,0 +1,3 @@
+* Separate the spec into separate specs for the core of Allegro 5, each
+  addon, as well as -devel and -debuginfo packages...
+
