@@ -201,149 +201,175 @@ rm -rf $RPM_BUILD_ROOT
 %package devel
 Summary:	
 Group:		
-%description
+%description devel
 
+%files devel
 
 %package addon-font
 Summary:	
 Group:		
-%description
+%description addon-font
 
+%files addon-font
 
 %package addon-font-devel
 Summary:	
 Group:		
-%description
+%description addon-font-devel
 
+%files addon-font-devel
 
 %package addon-acodec
 Summary:	
 Group:		
-%description
+%description addon-acodec
 
+%files addon-acodec
 
 %package addon-acodec-devel
 Summary:	
 Group:		
-%description
+%description addon-acodec-devel
 
+%files addon-acodec-devel
 
 %package addon-audio
 Summary:	
 Group:		
-%description
+%description addon-audio
 
+%files addon-audio
 
 %package addon-audio-devel
 Summary:	
 Group:		
-%description
+%description addon-audio-devel
 
+%files addon-audio-devel
 
 %package addon-color
 Summary:	
 Group:		
-%description
+%description addon-color
 
+%files addon-color
 
 %package addon-color-devel
 Summary:	
 Group:		
-%description
+%description addon-color-devel
 
+%files addon-color-devel
 
 %package addon-dialog
 Summary:	
 Group:		
-%description
+%description addon-dialog
 
+%files addon-dialog
 
 %package addon-dialog-devel
 Summary:	
 Group:		
-%description
+%description addon-dialog-devel
 
+%files addon-dialog-devel
 
 %package addon-font
 Summary:	
 Group:		
-%description
+%description addon-font
 
+%files addon-font
 
 %package addon-font-devel
 Summary:	
 Group:		
-%description
+%description addon-font-devel
 
+%files addon-font-devel
 
 %package addon-image
 Summary:	
 Group:		
-%description
+%description addon-image
 
+%files addon-image
 
 %package addon-image-devel
 Summary:	
 Group:		
-%description
+%description addon-image-devel
 
+%files addon-image-devel
 
 %package addon-main
 Summary:	
 Group:		
-%description
+%description addon-main
 
+%files addon-main
 
 %package addon-main-devel
 Summary:	
 Group:		
-%description
+%description addon-main-devel
 
+%files addon-main-devel
 
 %package addon-memfile
 Summary:	
 Group:		
-%description
+%description addon-memfile
 
+%files addon-memfile
 
 %package addon-memfile-devel
 Summary:	
 Group:		
-%description
+%description addon-memfile-devel
 
+%files addon-memfile-devel
 
 %package addon-physfs
 Summary:	
 Group:		
-%description
+%description addon-physfs
 
+%files addon-physfs
 
 %package addon-physfs-devel
 Summary:	
 Group:		
-%description
+%description addon-physfs-devel
 
+%files addon-physfs-devel
 
 %package addon-primitives
 Summary:	
 Group:		
-%description
+%description addon-primitives
 
+%files addon-primitives
 
 %package addon-primitives-devel
 Summary:	
 Group:		
-%description
+%description addon-primitives-devel
 
+%files addon-primitives-devel
 
 %package addon-ttf
 Summary:	
 Group:		
-%description
+%description addon-ttf
 
+%files addon-ttf
 
 %package addon-ttf-devel
 Summary:	
 Group:		
-%description
+%description addon-ttf-devel
+
+%files addon-ttf-devel
 
