@@ -30,6 +30,14 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
 
+%post
+ldconfig
+
+
+%postun
+ldconfig
+
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
