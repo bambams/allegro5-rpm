@@ -154,7 +154,6 @@ Group:
 %package addon-acodec
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-acodec
 
@@ -166,7 +165,6 @@ Requires:
 %package addon-acodec-devel
 Summary:	
 Group:		
-BuildRequires:	 
 Requires:	
 %description addon-acodec-devel
 
@@ -177,7 +175,6 @@ Requires:
 %package addon-audio
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-audio
 
@@ -189,7 +186,6 @@ Requires:
 %package addon-audio-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-audio-devel
 
@@ -200,7 +196,6 @@ Requires:
 %package addon-color
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-color
 
@@ -212,7 +207,6 @@ Requires:
 %package addon-color-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-color-devel
 
@@ -223,7 +217,6 @@ Requires:
 %package addon-dialog
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-dialog
 
@@ -235,7 +228,6 @@ Requires:
 %package addon-dialog-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-dialog-devel
 
@@ -246,7 +238,6 @@ Requires:
 %package addon-font
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-font
 
@@ -258,7 +249,6 @@ Requires:
 %package addon-font-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-font-devel
 
@@ -269,7 +259,6 @@ Requires:
 %package addon-image
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-image
 
@@ -281,7 +270,6 @@ Requires:
 %package addon-image-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-image-devel
 
@@ -292,7 +280,6 @@ Requires:
 %package addon-main
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-main
 
@@ -304,7 +291,6 @@ Requires:
 %package addon-main-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-main-devel
 
@@ -314,7 +300,6 @@ Requires:
 %package addon-memfile
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-memfile
 
@@ -326,7 +311,6 @@ Requires:
 %package addon-memfile-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-memfile-devel
 
@@ -337,7 +321,6 @@ Requires:
 %package addon-physfs
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-physfs
 
@@ -349,7 +332,6 @@ Requires:
 %package addon-physfs-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-physfs-devel
 
@@ -360,7 +342,6 @@ Requires:
 %package addon-primitives
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-primitives
 
@@ -372,7 +353,6 @@ Requires:
 %package addon-primitives-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-primitives-devel
 
@@ -383,7 +363,6 @@ Requires:
 %package addon-ttf
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-ttf
 
@@ -395,7 +374,6 @@ Requires:
 %package addon-ttf-devel
 Summary:	
 Group:		
-BuildRequires:	
 Requires:	
 %description addon-ttf-devel
 
