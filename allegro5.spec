@@ -147,6 +147,7 @@ rm -rf $RPM_BUILD_ROOT
 %package devel
 Summary:	
 Group:		
+Requires:	allegro5
 %description devel
 
 %files devel
@@ -165,7 +166,7 @@ Requires:
 %package addon-acodec-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-acodec
 %description addon-acodec-devel
 
 %files addon-acodec-devel
@@ -186,7 +187,7 @@ Requires:
 %package addon-audio-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-audio
 %description addon-audio-devel
 
 %files addon-audio-devel
@@ -207,7 +208,7 @@ Requires:
 %package addon-color-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-color
 %description addon-color-devel
 
 %files addon-color-devel
@@ -228,7 +229,7 @@ Requires:
 %package addon-dialog-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-dialog
 %description addon-dialog-devel
 
 %files addon-dialog-devel
@@ -249,7 +250,7 @@ Requires:
 %package addon-font-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-font
 %description addon-font-devel
 
 %files addon-font-devel
@@ -270,7 +271,7 @@ Requires:
 %package addon-image-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-image
 %description addon-image-devel
 
 %files addon-image-devel
@@ -311,7 +312,7 @@ Requires:
 %package addon-memfile-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-memfile
 %description addon-memfile-devel
 
 %files addon-memfile-devel
@@ -332,7 +333,7 @@ Requires:
 %package addon-physfs-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-physfs
 %description addon-physfs-devel
 
 %files addon-physfs-devel
@@ -353,7 +354,7 @@ Requires:
 %package addon-primitives-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-primitives
 %description addon-primitives-devel
 
 %files addon-primitives-devel
@@ -374,7 +375,7 @@ Requires:
 %package addon-ttf-devel
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5-addon-ttf
 %description addon-ttf-devel
 
 %files addon-ttf-devel
