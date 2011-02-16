@@ -11,7 +11,7 @@ Source0:	http://downloads.sourceforge.net/project/alleg/allegro/5.0.0/allegro-5.
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel gcc gtk2-devel libcurl-devel libjpeg-devel libpng-devel libvorbis-devel make mesa-libGL-devel mesa-libGLU-devel physfs-devel pulseaudio-libs-devel
-Requires:	alsa-lib-devel dumb-devel flac-devel freetype-devel gtk2-devel libjpeg-devel libpng-devel libvorbis-devel mesa-libGL-devel mesa-libGLU-devel physfs-devel pulseaudio-libs-devel
+Requires:	alsa-lib dumb flac freetype gtk2 libjpeg libpng libvorbis mesa-libGL mesa-libGLU physfs pulseaudio-libs
 
 %description
 
