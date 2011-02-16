@@ -48,18 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/alinline.h
 %{_includedir}/allegro5/allegro.h
 %{_includedir}/allegro5/allegro5.h
-%{_includedir}/allegro5/allegro_acodec.h
-%{_includedir}/allegro5/allegro_audio.h
-%{_includedir}/allegro5/allegro_color.h
 %{_includedir}/allegro5/allegro_direct3d.h
-%{_includedir}/allegro5/allegro_font.h
-%{_includedir}/allegro5/allegro_image.h
-%{_includedir}/allegro5/allegro_memfile.h
-%{_includedir}/allegro5/allegro_native_dialog.h
 %{_includedir}/allegro5/allegro_opengl.h
-%{_includedir}/allegro5/allegro_physfs.h
-%{_includedir}/allegro5/allegro_primitives.h
-%{_includedir}/allegro5/allegro_ttf.h
 %{_includedir}/allegro5/altime.h
 %{_includedir}/allegro5/base.h
 %{_includedir}/allegro5/bitmap.h
@@ -145,51 +135,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro.so
 %{_libdir}/liballegro.so.5.0
 %{_libdir}/liballegro.so.5.0.0
-%{_libdir}/liballegro_acodec.so
-%{_libdir}/liballegro_acodec.so.5.0
-%{_libdir}/liballegro_acodec.so.5.0.0
-%{_libdir}/liballegro_audio.so
-%{_libdir}/liballegro_audio.so.5.0
-%{_libdir}/liballegro_audio.so.5.0.0
-%{_libdir}/liballegro_color.so
-%{_libdir}/liballegro_color.so.5.0
-%{_libdir}/liballegro_color.so.5.0.0
-%{_libdir}/liballegro_dialog.so
-%{_libdir}/liballegro_dialog.so.5.0
-%{_libdir}/liballegro_dialog.so.5.0.0
-%{_libdir}/liballegro_font.so
-%{_libdir}/liballegro_font.so.5.0
-%{_libdir}/liballegro_font.so.5.0.0
-%{_libdir}/liballegro_image.so
-%{_libdir}/liballegro_image.so.5.0
-%{_libdir}/liballegro_image.so.5.0.0
-%{_libdir}/liballegro_main.so
-%{_libdir}/liballegro_main.so.5.0
-%{_libdir}/liballegro_main.so.5.0.0
-%{_libdir}/liballegro_memfile.so
-%{_libdir}/liballegro_memfile.so.5.0
-%{_libdir}/liballegro_memfile.so.5.0.0
-%{_libdir}/liballegro_physfs.so
-%{_libdir}/liballegro_physfs.so.5.0
-%{_libdir}/liballegro_physfs.so.5.0.0
-%{_libdir}/liballegro_primitives.so
-%{_libdir}/liballegro_primitives.so.5.0
-%{_libdir}/liballegro_primitives.so.5.0.0
-%{_libdir}/liballegro_ttf.so
-%{_libdir}/liballegro_ttf.so.5.0
-%{_libdir}/liballegro_ttf.so.5.0.0
 %{_libdir}/pkgconfig/allegro-5.0.pc
-%{_libdir}/pkgconfig/allegro_acodec-5.0.pc
-%{_libdir}/pkgconfig/allegro_audio-5.0.pc
-%{_libdir}/pkgconfig/allegro_color-5.0.pc
-%{_libdir}/pkgconfig/allegro_dialog-5.0.pc
-%{_libdir}/pkgconfig/allegro_font-5.0.pc
-%{_libdir}/pkgconfig/allegro_image-5.0.pc
-%{_libdir}/pkgconfig/allegro_main-5.0.pc
-%{_libdir}/pkgconfig/allegro_memfile-5.0.pc
-%{_libdir}/pkgconfig/allegro_physfs-5.0.pc
-%{_libdir}/pkgconfig/allegro_primitives-5.0.pc
-%{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %doc
 
@@ -211,6 +157,9 @@ Group:
 %description addon-acodec
 
 %files addon-acodec
+%{_libdir}/liballegro_acodec.so
+%{_libdir}/liballegro_acodec.so.5.0
+%{_libdir}/liballegro_acodec.so.5.0.0
 
 %package addon-acodec-devel
 Summary:	
@@ -218,6 +167,8 @@ Group:
 %description addon-acodec-devel
 
 %files addon-acodec-devel
+%{_includedir}/allegro5/allegro_acodec.h
+%{_libdir}/pkgconfig/allegro_acodec-5.0.pc
 
 %package addon-audio
 Summary:	
@@ -225,6 +176,9 @@ Group:
 %description addon-audio
 
 %files addon-audio
+%{_libdir}/liballegro_audio.so
+%{_libdir}/liballegro_audio.so.5.0
+%{_libdir}/liballegro_audio.so.5.0.0
 
 %package addon-audio-devel
 Summary:	
@@ -232,6 +186,8 @@ Group:
 %description addon-audio-devel
 
 %files addon-audio-devel
+%{_includedir}/allegro5/allegro_audio.h
+%{_libdir}/pkgconfig/allegro_audio-5.0.pc
 
 %package addon-color
 Summary:	
@@ -239,6 +195,9 @@ Group:
 %description addon-color
 
 %files addon-color
+%{_libdir}/liballegro_color.so
+%{_libdir}/liballegro_color.so.5.0
+%{_libdir}/liballegro_color.so.5.0.0
 
 %package addon-color-devel
 Summary:	
@@ -246,6 +205,8 @@ Group:
 %description addon-color-devel
 
 %files addon-color-devel
+%{_includedir}/allegro5/allegro_color.h
+%{_libdir}/pkgconfig/allegro_color-5.0.pc
 
 %package addon-dialog
 Summary:	
@@ -253,6 +214,9 @@ Group:
 %description addon-dialog
 
 %files addon-dialog
+%{_libdir}/liballegro_dialog.so
+%{_libdir}/liballegro_dialog.so.5.0
+%{_libdir}/liballegro_dialog.so.5.0.0
 
 %package addon-dialog-devel
 Summary:	
@@ -260,6 +224,8 @@ Group:
 %description addon-dialog-devel
 
 %files addon-dialog-devel
+%{_includedir}/allegro5/allegro_native_dialog.h
+%{_libdir}/pkgconfig/allegro_dialog-5.0.pc
 
 %package addon-font
 Summary:	
@@ -267,6 +233,9 @@ Group:
 %description addon-font
 
 %files addon-font
+%{_libdir}/liballegro_font.so
+%{_libdir}/liballegro_font.so.5.0
+%{_libdir}/liballegro_font.so.5.0.0
 
 %package addon-font-devel
 Summary:	
@@ -274,6 +243,8 @@ Group:
 %description addon-font-devel
 
 %files addon-font-devel
+%{_includedir}/allegro5/allegro_font.h
+%{_libdir}/pkgconfig/allegro_font-5.0.pc
 
 %package addon-image
 Summary:	
@@ -281,6 +252,9 @@ Group:
 %description addon-image
 
 %files addon-image
+%{_libdir}/liballegro_image.so
+%{_libdir}/liballegro_image.so.5.0
+%{_libdir}/liballegro_image.so.5.0.0
 
 %package addon-image-devel
 Summary:	
@@ -288,6 +262,8 @@ Group:
 %description addon-image-devel
 
 %files addon-image-devel
+%{_includedir}/allegro5/allegro_image.h
+%{_libdir}/pkgconfig/allegro_image-5.0.pc
 
 %package addon-main
 Summary:	
@@ -295,6 +271,9 @@ Group:
 %description addon-main
 
 %files addon-main
+%{_libdir}/liballegro_main.so
+%{_libdir}/liballegro_main.so.5.0
+%{_libdir}/liballegro_main.so.5.0.0
 
 %package addon-main-devel
 Summary:	
@@ -302,6 +281,7 @@ Group:
 %description addon-main-devel
 
 %files addon-main-devel
+%{_libdir}/pkgconfig/allegro_main-5.0.pc
 
 %package addon-memfile
 Summary:	
@@ -309,6 +289,9 @@ Group:
 %description addon-memfile
 
 %files addon-memfile
+%{_libdir}/liballegro_memfile.so
+%{_libdir}/liballegro_memfile.so.5.0
+%{_libdir}/liballegro_memfile.so.5.0.0
 
 %package addon-memfile-devel
 Summary:	
@@ -316,6 +299,8 @@ Group:
 %description addon-memfile-devel
 
 %files addon-memfile-devel
+%{_includedir}/allegro5/allegro_memfile.h
+%{_libdir}/pkgconfig/allegro_memfile-5.0.pc
 
 %package addon-physfs
 Summary:	
@@ -323,6 +308,9 @@ Group:
 %description addon-physfs
 
 %files addon-physfs
+%{_libdir}/liballegro_physfs.so
+%{_libdir}/liballegro_physfs.so.5.0
+%{_libdir}/liballegro_physfs.so.5.0.0
 
 %package addon-physfs-devel
 Summary:	
@@ -330,6 +318,8 @@ Group:
 %description addon-physfs-devel
 
 %files addon-physfs-devel
+%{_includedir}/allegro5/allegro_physfs.h
+%{_libdir}/pkgconfig/allegro_physfs-5.0.pc
 
 %package addon-primitives
 Summary:	
@@ -337,6 +327,9 @@ Group:
 %description addon-primitives
 
 %files addon-primitives
+%{_libdir}/liballegro_primitives.so
+%{_libdir}/liballegro_primitives.so.5.0
+%{_libdir}/liballegro_primitives.so.5.0.0
 
 %package addon-primitives-devel
 Summary:	
@@ -344,6 +337,8 @@ Group:
 %description addon-primitives-devel
 
 %files addon-primitives-devel
+%{_includedir}/allegro5/allegro_primitives.h
+%{_libdir}/pkgconfig/allegro_primitives-5.0.pc
 
 %package addon-ttf
 Summary:	
@@ -351,6 +346,9 @@ Group:
 %description addon-ttf
 
 %files addon-ttf
+%{_libdir}/liballegro_ttf.so
+%{_libdir}/liballegro_ttf.so.5.0
+%{_libdir}/liballegro_ttf.so.5.0.0
 
 %package addon-ttf-devel
 Summary:	
@@ -358,4 +356,6 @@ Group:
 %description addon-ttf-devel
 
 %files addon-ttf-devel
+%{_includedir}/allegro5/allegro_ttf.h
+%{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
