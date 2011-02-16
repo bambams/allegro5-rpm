@@ -17,7 +17,7 @@ Requires:	alsa-lib dumb flac freetype gtk2 libjpeg libpng libvorbis mesa-libGL m
 
 
 %prep
-%setup -q
+%setup -n allegro-5.0.0 -q
 
 
 %build
