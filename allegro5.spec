@@ -155,7 +155,7 @@ Requires:	allegro5
 %package addon-acodec
 Summary:	
 Group:		
-Requires:	 dumb flac libvorbis
+Requires:	 allegro5 dumb flac libvorbis
 %description addon-acodec
 
 %files addon-acodec
@@ -176,7 +176,7 @@ Requires:	allegro5-addon-acodec dumb-devel flac-devel libvorbis-devel
 %package addon-audio
 Summary:	
 Group:		
-Requires:	alsa-lib
+Requires:	allegro5 alsa-lib
 %description addon-audio
 
 %files addon-audio
@@ -197,7 +197,7 @@ Requires:	allegro5-addon-audio alsa-lib-devel
 %package addon-color
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-color
 
 %files addon-color
@@ -218,7 +218,7 @@ Requires:	allegro5-addon-color
 %package addon-dialog
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-dialog
 
 %files addon-dialog
@@ -239,7 +239,7 @@ Requires:	allegro5-addon-dialog
 %package addon-font
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-font
 
 %files addon-font
@@ -260,7 +260,7 @@ Requires:	allegro5-addon-font
 %package addon-image
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-image
 
 %files addon-image
@@ -281,7 +281,7 @@ Requires:	allegro5-addon-image
 %package addon-main
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-main
 
 %files addon-main
@@ -301,7 +301,7 @@ Requires:
 %package addon-memfile
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-memfile
 
 %files addon-memfile
@@ -322,7 +322,7 @@ Requires:	allegro5-addon-memfile
 %package addon-physfs
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-physfs
 
 %files addon-physfs
@@ -343,7 +343,7 @@ Requires:	allegro5-addon-physfs
 %package addon-primitives
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-primitives
 
 %files addon-primitives
@@ -364,7 +364,7 @@ Requires:	allegro5-addon-primitives
 %package addon-ttf
 Summary:	
 Group:		
-Requires:	
+Requires:	allegro5
 %description addon-ttf
 
 %files addon-ttf
