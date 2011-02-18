@@ -36,6 +36,5 @@ Or, just execute the included init.sh script, which will do all
 of these things for you. I've tried to make it as smart and safe as
 possible, but it might still do "damage" so USE AT OWN RISK.
 
-Note that this is a WIP and doesn't actually build an RPM yet. ;) It's
-that much further away from being good enough to submit to any distros.
+We can now build the SRPM and RPMs, but none of them have been tested yet.
 
