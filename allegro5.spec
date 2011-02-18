@@ -44,6 +44,25 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
+%{_libdir}/liballegro.so
+%{_libdir}/liballegro.so.5.0
+%{_libdir}/liballegro.so.5.0.0
+%{_libdir}/pkgconfig/allegro-5.0.pc
+
+%doc
+
+
+
+%changelog
+
+
+%package devel
+Summary:	Header files for the Allegro 5 library.
+Group:		System Environment/Libraries
+Requires:	allegro5
+%description devel
+
+%files devel
 %{_includedir}/allegro5/alcompat.h
 %{_includedir}/allegro5/alinline.h
 %{_includedir}/allegro5/allegro.h
@@ -132,25 +151,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/tls.h
 %{_includedir}/allegro5/transformations.h
 %{_includedir}/allegro5/utf8.h
-%{_libdir}/liballegro.so
-%{_libdir}/liballegro.so.5.0
-%{_libdir}/liballegro.so.5.0.0
-%{_libdir}/pkgconfig/allegro-5.0.pc
-
-%doc
-
-
-
-%changelog
-
-
-%package devel
-Summary:	Header files for the Allegro 5 library.
-Group:		System Environment/Libraries
-Requires:	allegro5
-%description devel
-
-%files devel
 
 %package addon-acodec
 Summary:	Audio codec addon for the Allegro 5 library.
