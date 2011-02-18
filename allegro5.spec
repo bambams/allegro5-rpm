@@ -145,17 +145,17 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %package devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description devel
 
 %files devel
 
 %package addon-acodec
-Summary:	
-Group:		
-Requires:	 allegro5 dumb flac libvorbis
+Summary:	Audio codec addon for the Allegro 5 library.
+Group:		System Environment/Libraries
+Requires:	allegro5 dumb flac libvorbis
 %description addon-acodec
 
 %files addon-acodec
@@ -164,8 +164,8 @@ Requires:	 allegro5 dumb flac libvorbis
 %{_libdir}/liballegro_acodec.so.5.0.0
 
 %package addon-acodec-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 audio codec addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-acodec dumb-devel flac-devel libvorbis-devel
 %description addon-acodec-devel
 
@@ -174,8 +174,8 @@ Requires:	allegro5-addon-acodec dumb-devel flac-devel libvorbis-devel
 %{_libdir}/pkgconfig/allegro_acodec-5.0.pc
 
 %package addon-audio
-Summary:	
-Group:		
+Summary:	Audio addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5 alsa-lib
 %description addon-audio
 
@@ -185,8 +185,8 @@ Requires:	allegro5 alsa-lib
 %{_libdir}/liballegro_audio.so.5.0.0
 
 %package addon-audio-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 audio addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-audio alsa-lib-devel
 %description addon-audio-devel
 
@@ -195,8 +195,8 @@ Requires:	allegro5-addon-audio alsa-lib-devel
 %{_libdir}/pkgconfig/allegro_audio-5.0.pc
 
 %package addon-color
-Summary:	
-Group:		
+Summary:	Color addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-color
 
@@ -206,8 +206,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_color.so.5.0.0
 
 %package addon-color-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 color addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-color
 %description addon-color-devel
 
@@ -216,8 +216,8 @@ Requires:	allegro5-addon-color
 %{_libdir}/pkgconfig/allegro_color-5.0.pc
 
 %package addon-dialog
-Summary:	
-Group:		
+Summary:	Dialog addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-dialog
 
@@ -227,8 +227,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_dialog.so.5.0.0
 
 %package addon-dialog-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 dialog addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-dialog
 %description addon-dialog-devel
 
@@ -237,8 +237,8 @@ Requires:	allegro5-addon-dialog
 %{_libdir}/pkgconfig/allegro_dialog-5.0.pc
 
 %package addon-font
-Summary:	
-Group:		
+Summary:	Font addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-font
 
@@ -248,8 +248,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_font.so.5.0.0
 
 %package addon-font-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 font addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-font
 %description addon-font-devel
 
@@ -258,8 +258,8 @@ Requires:	allegro5-addon-font
 %{_libdir}/pkgconfig/allegro_font-5.0.pc
 
 %package addon-image
-Summary:	
-Group:		
+Summary:	Image addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-image
 
@@ -269,8 +269,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_image.so.5.0.0
 
 %package addon-image-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 image addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-image
 %description addon-image-devel
 
@@ -279,8 +279,8 @@ Requires:	allegro5-addon-image
 %{_libdir}/pkgconfig/allegro_image-5.0.pc
 
 %package addon-main
-Summary:	
-Group:		
+Summary:	Main addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-main
 
@@ -290,17 +290,17 @@ Requires:	allegro5
 %{_libdir}/liballegro_main.so.5.0.0
 
 %package addon-main-devel
-Summary:	
-Group:		
-Requires:	
+Summary:	Header files for the Allegro 5 main addon.
+Group:		System Environment/Libraries
+Requires:	allegro5-addon-main
 %description addon-main-devel
 
 %files addon-main-devel
 %{_libdir}/pkgconfig/allegro_main-5.0.pc
 
 %package addon-memfile
-Summary:	
-Group:		
+Summary:	Memory filesystem addon for Allegro 5.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-memfile
 
@@ -310,8 +310,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_memfile.so.5.0.0
 
 %package addon-memfile-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 memory filesystem addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-memfile
 %description addon-memfile-devel
 
@@ -320,8 +320,8 @@ Requires:	allegro5-addon-memfile
 %{_libdir}/pkgconfig/allegro_memfile-5.0.pc
 
 %package addon-physfs
-Summary:	
-Group:		
+Summary:	Physfs addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-physfs
 
@@ -331,8 +331,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_physfs.so.5.0.0
 
 %package addon-physfs-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 physfs addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-physfs
 %description addon-physfs-devel
 
@@ -341,8 +341,8 @@ Requires:	allegro5-addon-physfs
 %{_libdir}/pkgconfig/allegro_physfs-5.0.pc
 
 %package addon-primitives
-Summary:	
-Group:		
+Summary:	Primitives addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-primitives
 
@@ -352,8 +352,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_primitives.so.5.0.0
 
 %package addon-primitives-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 primitives addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-primitives
 %description addon-primitives-devel
 
@@ -362,8 +362,8 @@ Requires:	allegro5-addon-primitives
 %{_libdir}/pkgconfig/allegro_primitives-5.0.pc
 
 %package addon-ttf
-Summary:	
-Group:		
+Summary:	TTF addon for the Allegro 5 library.
+Group:		System Environment/Libraries
 Requires:	allegro5
 %description addon-ttf
 
@@ -373,8 +373,8 @@ Requires:	allegro5
 %{_libdir}/liballegro_ttf.so.5.0.0
 
 %package addon-ttf-devel
-Summary:	
-Group:		
+Summary:	Header files for the Allegro 5 TTF addon.
+Group:		System Environment/Libraries
 Requires:	allegro5-addon-ttf
 %description addon-ttf-devel
 
