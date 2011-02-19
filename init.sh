@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 root=${1:-$HOME/src/allegro/rpm}
-rpm_tree=$HOME/rpm
+rpm_tree=${2:-$HOME/rpm}
 src_path="$rpm_tree/SOURCES/allegro-5.0.0.tar.gz"
 src_sha1=7a6c7bf63d65b0e76ec6daf7e09e293fdfc8c137
 src_url=http://downloads.sourceforge.net/project/alleg/allegro/5.0.0/allegro-5.0.0.tar.gz
@@ -41,6 +41,14 @@ fi
 if [ ! "$skip_setuptree" == 1 ]; then
     echo "Setting up rpm tree..."
     /usr/bin/rpmdev-setuptree
+fi
+
+if [ ! -d "$rpm_tree" ]; then
+    echo "Failed to find '$rpm_tree' tree... Trying 'rpmbuild'..." 1>&2
+    echo "In the future you can save time by specifying the rpm " 1>&2
+    echo "build tree as the second argument to this script." 1>&2
+    "$0" "$root" "`echo $rpm_tree | sed -r 's,\brpm\b,rpmbuild,'`"
+    exit $?
 fi
 
 echo "Creating .spec symlinks in '$rpm_tree/SPECS'..."
