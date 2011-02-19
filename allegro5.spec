@@ -52,7 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-
+* Sat Feb 19 2011 Brandon McCaig <bamccaig@gmail.com> 0.0.1
+- Initial version.
 
 %package devel
 Summary:	Header files for the Allegro 5 library.
