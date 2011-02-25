@@ -1,4 +1,4 @@
-# vim: noexpandtab textwidth=0
+# vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
 Release:	0%{?dist}
