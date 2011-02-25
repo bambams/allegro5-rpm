@@ -268,7 +268,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/ALLEGRO_JOYFLAGS.3.gz
 %{_mandir}/man3/ALLEGRO_JOYSTICK.3.gz
 %{_mandir}/man3/ALLEGRO_JOYSTICK_STATE.3.gz
-%{_mandir}/man3/ALLEGRO_KEYBOARD_STATE.3.gz %{_mandir}/man3/ALLEGRO_LOCKED_REGION.3.gz
+%{_mandir}/man3/ALLEGRO_KEYBOARD_STATE.3.gz
+%{_mandir}/man3/ALLEGRO_LOCKED_REGION.3.gz
 %{_mandir}/man3/ALLEGRO_MEMORY_INTERFACE.3.gz
 %{_mandir}/man3/ALLEGRO_MIXER.3.gz
 %{_mandir}/man3/ALLEGRO_MIXER_QUALITY.3.gz
