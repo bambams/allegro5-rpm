@@ -24,21 +24,21 @@ occupies the same niche and retains a familiar style.
 %package doc
 Summary:	Documentation files for the Allegro 5 library.
 Group:		Documentation
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description doc
 Contains manpage documentation for the Allegro 5 library.
 
 %package devel
 Summary:	Header files for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description devel
 This package is needed to build programs using the Allegro 5 library.
 
 %package addon-acodec
 Summary:	Audio codec addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5 dumb flac libvorbis
+Requires:	%{name} = %{version}-%{release} dumb flac libvorbis
 %description addon-acodec
 This package provides the audio codec addon for the Allegro 5 library.
 This addon allows you to load audio sample formats.
@@ -46,7 +46,7 @@ This addon allows you to load audio sample formats.
 %package addon-acodec-devel
 Summary:	Header files for the Allegro 5 audio codec addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-acodec dumb-devel flac-devel libvorbis-devel
+Requires:	%{name}-addon-acodec = %{version}-%{release} dumb-devel flac-devel libvorbis-devel
 %description addon-acodec-devel
 This package is required to build programs that use the Allegro 5 audio
 codec addon.
@@ -54,7 +54,7 @@ codec addon.
 %package addon-audio
 Summary:	Audio addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5 alsa-lib
+Requires:	%{name} = %{version}-%{release} alsa-lib
 %description addon-audio
 This package provides the audio addon for the Allegro 5 library. This
 addon allows you to play sounds in your Allegro 5 programs.
@@ -62,7 +62,7 @@ addon allows you to play sounds in your Allegro 5 programs.
 %package addon-audio-devel
 Summary:	Header files for the Allegro 5 audio addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-audio alsa-lib-devel
+Requires:	%{name}-addon-audio = %{version}-%{release} alsa-lib-devel
 %description addon-audio-devel
 This package is required to build programs that use the Allegro 5 audio
 addon.
@@ -70,7 +70,7 @@ addon.
 %package addon-color
 Summary:	Color addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-color
 This package provides the color addon for the Allegro 5 library. This
 addon allows you to create and convert color formats.
@@ -78,7 +78,7 @@ addon allows you to create and convert color formats.
 %package addon-color-devel
 Summary:	Header files for the Allegro 5 color addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-color
+Requires:	%{name}-addon-color = %{version}-%{release}
 %description addon-color-devel
 This package is required to build programs that use the Allegro 5 color
 addon.
@@ -86,7 +86,7 @@ addon.
 %package addon-dialog
 Summary:	Dialog addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-dialog
 This package provides the dialog addon for the Allegro 5 library. This
 addon allows you to show dialog boxes.
@@ -94,7 +94,7 @@ addon allows you to show dialog boxes.
 %package addon-dialog-devel
 Summary:	Header files for the Allegro 5 dialog addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-dialog
+Requires:	%{name}-addon-dialog = %{version}-%{release}
 %description addon-dialog-devel
 This package is required to build programs that use the Allegro 5 dialog
 addon.
@@ -102,7 +102,7 @@ addon.
 %package addon-font
 Summary:	Font addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-font
 This package provides the font addon for the Allegro 5 library. Provides
 the ability to load fonts into Allegro 5.
@@ -110,7 +110,7 @@ the ability to load fonts into Allegro 5.
 %package addon-font-devel
 Summary:	Header files for the Allegro 5 font addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-font
+Requires:	%{name}-addon-font = %{version}-%{release}
 %description addon-font-devel
 This package is required to build programs that use the Allegro 5 font
 addon.
@@ -118,7 +118,7 @@ addon.
 %package addon-image
 Summary:	Image addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-image
 This package provides the image addon for the Allegro 5 library. Provides
 support for loading image file formats.
@@ -126,7 +126,7 @@ support for loading image file formats.
 %package addon-image-devel
 Summary:	Header files for the Allegro 5 image addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-image
+Requires:	%{name}-addon-image = %{version}-%{release}
 %description addon-image-devel
 This package is required to build programs that use the Allegro 5 image
 addon.
@@ -134,7 +134,7 @@ addon.
 %package addon-main
 Summary:	Main addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-main
 This package provides the main addon for the Allegro 5 library. This
 addon is used to workaround OS X oddities and should do nothing in Linux.
@@ -143,7 +143,7 @@ It is recommended that cross-platform games/programs use this addon.
 %package addon-main-devel
 Summary:	Header files for the Allegro 5 main addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-main
+Requires:	%{name}-addon-main = %{version}-%{release}
 %description addon-main-devel
 This package is required to build programs that use the Allegro 5 main
 addon.
@@ -151,7 +151,7 @@ addon.
 %package addon-memfile
 Summary:	Memory filesystem addon for Allegro 5.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-memfile
 This package provides the memfile addon for the Allegro 5 library. This
 addon allows you to use Allegro 5 file routines on a memory buffer.
@@ -159,7 +159,7 @@ addon allows you to use Allegro 5 file routines on a memory buffer.
 %package addon-memfile-devel
 Summary:	Header files for the Allegro 5 memory filesystem addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-memfile
+Requires:	%{name}-addon-memfile = %{version}-%{release}
 %description addon-memfile-devel
 This package is required to build programs that use the Allegro 5 memfile
 addon.
@@ -167,7 +167,7 @@ addon.
 %package addon-physfs
 Summary:	Physfs addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-physfs
 This package provides the physfs addon for the Allegro 5 library. This
 addon provides an interface to the PhysicsFS library, allowing you to
@@ -177,7 +177,7 @@ were physically on the file system.
 %package addon-physfs-devel
 Summary:	Header files for the Allegro 5 physfs addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-physfs
+Requires:	%{name}-addon-physfs = %{version}-%{release}
 %description addon-physfs-devel
 This package is required to build programs that use the Allegro 5 physfs
 addon.
@@ -185,7 +185,7 @@ addon.
 %package addon-primitives
 Summary:	Primitives addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-primitives
 This package provides the primitives addon for the Allegro 5 library.
 This addon provides Allegro 5 routines to draw primitive shapes.
@@ -193,7 +193,7 @@ This addon provides Allegro 5 routines to draw primitive shapes.
 %package addon-primitives-devel
 Summary:	Header files for the Allegro 5 primitives addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-primitives
+Requires:	%{name}-addon-primitives = %{version}-%{release}
 %description addon-primitives-devel
 This package is required to build programs that use the Allegro 5
 primitives addon.
@@ -201,7 +201,7 @@ primitives addon.
 %package addon-ttf
 Summary:	TTF addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	allegro5
+Requires:	%{name} = %{version}-%{release}
 %description addon-ttf
 This package provides the ttf addon for the Allegro 5 library. This addon
 allows you to load and use TTF fonts in your Allegro 5 programs.
@@ -209,7 +209,7 @@ allows you to load and use TTF fonts in your Allegro 5 programs.
 %package addon-ttf-devel
 Summary:	Header files for the Allegro 5 TTF addon.
 Group:		System Environment/Libraries
-Requires:	allegro5-addon-ttf
+Requires:	%{name}-addon-ttf = %{version}-%{release}
 %description addon-ttf-devel
 This package is required to build programs that use the Allegro 5 ttf
 addon.
