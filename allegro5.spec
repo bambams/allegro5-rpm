@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	0%{?dist}
+Release:	1%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -1144,6 +1144,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
-* Sat Feb 19 2011 Brandon McCaig <bamccaig@gmail.com> 0.0.1
+* Fri Feb 25 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-1
 - Initial version.
 
