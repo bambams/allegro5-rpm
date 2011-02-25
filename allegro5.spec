@@ -10,8 +10,12 @@ URL:		http://liballeg.org/
 Source0:	http://downloads.sourceforge.net/project/alleg/allegro/5.0.0/allegro-5.0.0.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
-BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel gcc gtk2-devel libcurl-devel libjpeg-devel libpng-devel libvorbis-devel make mesa-libGL-devel mesa-libGLU-devel pandoc physfs-devel pulseaudio-libs-devel
-Requires:	freetype gtk2 libjpeg libpng mesa-libGL mesa-libGLU physfs pulseaudio-libs
+BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel
+BuildRequires:	gcc gtk2-devel libcurl-devel libjpeg-devel libpng-devel
+BuildRequires:	libvorbis-devel make mesa-libGL-devel mesa-libGLU-devel
+BuildRequires:	pandoc physfs-devel pulseaudio-libs-devel
+Requires:	freetype gtk2 libjpeg libpng mesa-libGL mesa-libGLU physfs
+Requires:	pulseaudio-libs
 
 %description
 Allegro is a cross-platform library intended for use in computer games
