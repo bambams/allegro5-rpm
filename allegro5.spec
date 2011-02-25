@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -23,19 +23,13 @@ revision of the library, designed to take advantage of modern hardware
 Although it is not backwards compatible with earlier versions, it still
 occupies the same niche and retains a familiar style.
 
-%package doc
-Summary:	Documentation files for the Allegro 5 library
-Group:		Documentation
-Requires:	%{name} = %{version}-%{release}
-%description doc
-Contains manpage documentation for the Allegro 5 library.
-
 %package devel
-Summary:	Header files for the Allegro 5 library
+Summary:	Development files for the Allegro 5 library
 Group:		System Environment/Libraries
 Requires:	%{name} = %{version}-%{release}
 %description devel
 This package is needed to build programs using the Allegro 5 library.
+Contains header files and man-page documentation.
 
 %package addon-acodec
 Summary:	Audio codec addon for the Allegro 5 library
@@ -241,7 +235,95 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro.so.5.0.0
 %{_libdir}/pkgconfig/allegro-5.0.pc
 
-%files doc
+%files devel
+%{_includedir}/allegro5/alcompat.h
+%{_includedir}/allegro5/alinline.h
+%{_includedir}/allegro5/allegro.h
+%{_includedir}/allegro5/allegro5.h
+%{_includedir}/allegro5/allegro_direct3d.h
+%{_includedir}/allegro5/allegro_opengl.h
+%{_includedir}/allegro5/altime.h
+%{_includedir}/allegro5/base.h
+%{_includedir}/allegro5/bitmap.h
+%{_includedir}/allegro5/bitmap_io.h
+%{_includedir}/allegro5/color.h
+%{_includedir}/allegro5/config.h
+%{_includedir}/allegro5/debug.h
+%{_includedir}/allegro5/display.h
+%{_includedir}/allegro5/error.h
+%{_includedir}/allegro5/events.h
+%{_includedir}/allegro5/file.h
+%{_includedir}/allegro5/fixed.h
+%{_includedir}/allegro5/fmaths.h
+%{_includedir}/allegro5/fshook.h
+%{_includedir}/allegro5/inline/fmaths.inl
+%{_includedir}/allegro5/internal/aintern.h
+%{_includedir}/allegro5/internal/aintern_atomicops.h
+%{_includedir}/allegro5/internal/aintern_bitmap.h
+%{_includedir}/allegro5/internal/aintern_blend.h
+%{_includedir}/allegro5/internal/aintern_convert.h
+%{_includedir}/allegro5/internal/aintern_display.h
+%{_includedir}/allegro5/internal/aintern_dtor.h
+%{_includedir}/allegro5/internal/aintern_events.h
+%{_includedir}/allegro5/internal/aintern_float.h
+%{_includedir}/allegro5/internal/aintern_fshook.h
+%{_includedir}/allegro5/internal/aintern_joystick.h
+%{_includedir}/allegro5/internal/aintern_keyboard.h
+%{_includedir}/allegro5/internal/aintern_list.h
+%{_includedir}/allegro5/internal/aintern_mouse.h
+%{_includedir}/allegro5/internal/aintern_opengl.h
+%{_includedir}/allegro5/internal/aintern_pixels.h
+%{_includedir}/allegro5/internal/aintern_system.h
+%{_includedir}/allegro5/internal/aintern_thread.h
+%{_includedir}/allegro5/internal/aintern_tls.h
+%{_includedir}/allegro5/internal/aintern_vector.h
+%{_includedir}/allegro5/internal/alconfig.h
+%{_includedir}/allegro5/joystick.h
+%{_includedir}/allegro5/keyboard.h
+%{_includedir}/allegro5/keycodes.h
+%{_includedir}/allegro5/memory.h
+%{_includedir}/allegro5/mouse.h
+%{_includedir}/allegro5/opengl/GLext/gl_ext_alias.h
+%{_includedir}/allegro5/opengl/GLext/gl_ext_api.h
+%{_includedir}/allegro5/opengl/GLext/gl_ext_defs.h
+%{_includedir}/allegro5/opengl/GLext/gl_ext_list.h
+%{_includedir}/allegro5/opengl/GLext/glx_ext_alias.h
+%{_includedir}/allegro5/opengl/GLext/glx_ext_api.h
+%{_includedir}/allegro5/opengl/GLext/glx_ext_defs.h
+%{_includedir}/allegro5/opengl/GLext/glx_ext_list.h
+%{_includedir}/allegro5/opengl/GLext/wgl_ext_alias.h
+%{_includedir}/allegro5/opengl/GLext/wgl_ext_api.h
+%{_includedir}/allegro5/opengl/GLext/wgl_ext_defs.h
+%{_includedir}/allegro5/opengl/GLext/wgl_ext_list.h
+%{_includedir}/allegro5/opengl/gl_ext.h
+%{_includedir}/allegro5/path.h
+%{_includedir}/allegro5/platform/aintlnx.h
+%{_includedir}/allegro5/platform/aintosx.h
+%{_includedir}/allegro5/platform/aintunix.h
+%{_includedir}/allegro5/platform/aintuthr.h
+%{_includedir}/allegro5/platform/aintwin.h
+%{_includedir}/allegro5/platform/aintwthr.h
+%{_includedir}/allegro5/platform/al386gcc.h
+%{_includedir}/allegro5/platform/al386vc.h
+%{_includedir}/allegro5/platform/al386wat.h
+%{_includedir}/allegro5/platform/albcc32.h
+%{_includedir}/allegro5/platform/almngw32.h
+%{_includedir}/allegro5/platform/almsvc.h
+%{_includedir}/allegro5/platform/alosx.h
+%{_includedir}/allegro5/platform/alosxcfg.h
+%{_includedir}/allegro5/platform/alplatf.h
+%{_includedir}/allegro5/platform/alucfg.h
+%{_includedir}/allegro5/platform/alunix.h
+%{_includedir}/allegro5/platform/alwatcom.h
+%{_includedir}/allegro5/platform/alwin.h
+%{_includedir}/allegro5/platform/astdbool.h
+%{_includedir}/allegro5/platform/astdint.h
+%{_includedir}/allegro5/system.h
+%{_includedir}/allegro5/threads.h
+%{_includedir}/allegro5/timer.h
+%{_includedir}/allegro5/tls.h
+%{_includedir}/allegro5/transformations.h
+%{_includedir}/allegro5/utf8.h
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_STREAM.3.gz
@@ -955,96 +1037,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/al_wait_for_event_until.3.gz
 %{_mandir}/man3/al_wait_for_vsync.3.gz
 
-%files devel
-%{_includedir}/allegro5/alcompat.h
-%{_includedir}/allegro5/alinline.h
-%{_includedir}/allegro5/allegro.h
-%{_includedir}/allegro5/allegro5.h
-%{_includedir}/allegro5/allegro_direct3d.h
-%{_includedir}/allegro5/allegro_opengl.h
-%{_includedir}/allegro5/altime.h
-%{_includedir}/allegro5/base.h
-%{_includedir}/allegro5/bitmap.h
-%{_includedir}/allegro5/bitmap_io.h
-%{_includedir}/allegro5/color.h
-%{_includedir}/allegro5/config.h
-%{_includedir}/allegro5/debug.h
-%{_includedir}/allegro5/display.h
-%{_includedir}/allegro5/error.h
-%{_includedir}/allegro5/events.h
-%{_includedir}/allegro5/file.h
-%{_includedir}/allegro5/fixed.h
-%{_includedir}/allegro5/fmaths.h
-%{_includedir}/allegro5/fshook.h
-%{_includedir}/allegro5/inline/fmaths.inl
-%{_includedir}/allegro5/internal/aintern.h
-%{_includedir}/allegro5/internal/aintern_atomicops.h
-%{_includedir}/allegro5/internal/aintern_bitmap.h
-%{_includedir}/allegro5/internal/aintern_blend.h
-%{_includedir}/allegro5/internal/aintern_convert.h
-%{_includedir}/allegro5/internal/aintern_display.h
-%{_includedir}/allegro5/internal/aintern_dtor.h
-%{_includedir}/allegro5/internal/aintern_events.h
-%{_includedir}/allegro5/internal/aintern_float.h
-%{_includedir}/allegro5/internal/aintern_fshook.h
-%{_includedir}/allegro5/internal/aintern_joystick.h
-%{_includedir}/allegro5/internal/aintern_keyboard.h
-%{_includedir}/allegro5/internal/aintern_list.h
-%{_includedir}/allegro5/internal/aintern_mouse.h
-%{_includedir}/allegro5/internal/aintern_opengl.h
-%{_includedir}/allegro5/internal/aintern_pixels.h
-%{_includedir}/allegro5/internal/aintern_system.h
-%{_includedir}/allegro5/internal/aintern_thread.h
-%{_includedir}/allegro5/internal/aintern_tls.h
-%{_includedir}/allegro5/internal/aintern_vector.h
-%{_includedir}/allegro5/internal/alconfig.h
-%{_includedir}/allegro5/joystick.h
-%{_includedir}/allegro5/keyboard.h
-%{_includedir}/allegro5/keycodes.h
-%{_includedir}/allegro5/memory.h
-%{_includedir}/allegro5/mouse.h
-%{_includedir}/allegro5/opengl/GLext/gl_ext_alias.h
-%{_includedir}/allegro5/opengl/GLext/gl_ext_api.h
-%{_includedir}/allegro5/opengl/GLext/gl_ext_defs.h
-%{_includedir}/allegro5/opengl/GLext/gl_ext_list.h
-%{_includedir}/allegro5/opengl/GLext/glx_ext_alias.h
-%{_includedir}/allegro5/opengl/GLext/glx_ext_api.h
-%{_includedir}/allegro5/opengl/GLext/glx_ext_defs.h
-%{_includedir}/allegro5/opengl/GLext/glx_ext_list.h
-%{_includedir}/allegro5/opengl/GLext/wgl_ext_alias.h
-%{_includedir}/allegro5/opengl/GLext/wgl_ext_api.h
-%{_includedir}/allegro5/opengl/GLext/wgl_ext_defs.h
-%{_includedir}/allegro5/opengl/GLext/wgl_ext_list.h
-%{_includedir}/allegro5/opengl/gl_ext.h
-%{_includedir}/allegro5/path.h
-%{_includedir}/allegro5/platform/aintlnx.h
-%{_includedir}/allegro5/platform/aintosx.h
-%{_includedir}/allegro5/platform/aintunix.h
-%{_includedir}/allegro5/platform/aintuthr.h
-%{_includedir}/allegro5/platform/aintwin.h
-%{_includedir}/allegro5/platform/aintwthr.h
-%{_includedir}/allegro5/platform/al386gcc.h
-%{_includedir}/allegro5/platform/al386vc.h
-%{_includedir}/allegro5/platform/al386wat.h
-%{_includedir}/allegro5/platform/albcc32.h
-%{_includedir}/allegro5/platform/almngw32.h
-%{_includedir}/allegro5/platform/almsvc.h
-%{_includedir}/allegro5/platform/alosx.h
-%{_includedir}/allegro5/platform/alosxcfg.h
-%{_includedir}/allegro5/platform/alplatf.h
-%{_includedir}/allegro5/platform/alucfg.h
-%{_includedir}/allegro5/platform/alunix.h
-%{_includedir}/allegro5/platform/alwatcom.h
-%{_includedir}/allegro5/platform/alwin.h
-%{_includedir}/allegro5/platform/astdbool.h
-%{_includedir}/allegro5/platform/astdint.h
-%{_includedir}/allegro5/system.h
-%{_includedir}/allegro5/threads.h
-%{_includedir}/allegro5/timer.h
-%{_includedir}/allegro5/tls.h
-%{_includedir}/allegro5/transformations.h
-%{_includedir}/allegro5/utf8.h
-
 %files addon-acodec
 %{_libdir}/liballegro_acodec.so
 %{_libdir}/liballegro_acodec.so.5.0
@@ -1144,6 +1136,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Fri Feb 25 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-2
+- Merged doc package into the devel package.
+
 * Fri Feb 25 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-1
 - Initial version.
 
