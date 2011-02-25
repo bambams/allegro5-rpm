@@ -14,8 +14,6 @@ BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel
 BuildRequires:	gcc gtk2-devel libcurl-devel libjpeg-devel libpng-devel
 BuildRequires:	libvorbis-devel make mesa-libGL-devel mesa-libGLU-devel
 BuildRequires:	pandoc physfs-devel pulseaudio-libs-devel
-Requires:	freetype gtk2 libjpeg libpng mesa-libGL mesa-libGLU physfs
-Requires:	pulseaudio-libs
 
 %description
 Allegro is a cross-platform library intended for use in computer games
@@ -42,7 +40,7 @@ This package is needed to build programs using the Allegro 5 library.
 %package addon-acodec
 Summary:	Audio codec addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	%{name} = %{version}-%{release} dumb flac libvorbis
+Requires:	%{name} = %{version}-%{release}
 %description addon-acodec
 This package provides the audio codec addon for the Allegro 5 library.
 This addon allows you to load audio sample formats.
@@ -50,7 +48,7 @@ This addon allows you to load audio sample formats.
 %package addon-acodec-devel
 Summary:	Header files for the Allegro 5 audio codec addon.
 Group:		System Environment/Libraries
-Requires:	%{name}-addon-acodec = %{version}-%{release} dumb-devel flac-devel libvorbis-devel
+Requires:	%{name}-addon-acodec = %{version}-%{release}
 %description addon-acodec-devel
 This package is required to build programs that use the Allegro 5 audio
 codec addon.
@@ -58,7 +56,7 @@ codec addon.
 %package addon-audio
 Summary:	Audio addon for the Allegro 5 library.
 Group:		System Environment/Libraries
-Requires:	%{name} = %{version}-%{release} alsa-lib
+Requires:	%{name} = %{version}-%{release}
 %description addon-audio
 This package provides the audio addon for the Allegro 5 library. This
 addon allows you to play sounds in your Allegro 5 programs.
@@ -66,7 +64,7 @@ addon allows you to play sounds in your Allegro 5 programs.
 %package addon-audio-devel
 Summary:	Header files for the Allegro 5 audio addon.
 Group:		System Environment/Libraries
-Requires:	%{name}-addon-audio = %{version}-%{release} alsa-lib-devel
+Requires:	%{name}-addon-audio = %{version}-%{release}
 %description addon-audio-devel
 This package is required to build programs that use the Allegro 5 audio
 addon.
