@@ -145,7 +145,7 @@ This package is required to build programs that use the Allegro 5 main
 addon.
 
 %package addon-memfile
-Summary:	Memory filesystem addon for Allegro 5
+Summary:	Memory file-system addon for Allegro 5
 Group:		System Environment/Libraries
 Requires:	%{name} = %{version}-%{release}
 %description addon-memfile
@@ -153,7 +153,7 @@ This package provides the memfile addon for the Allegro 5 library. This
 addon allows you to use Allegro 5 file routines on a memory buffer.
 
 %package addon-memfile-devel
-Summary:	Header files for the Allegro 5 memory filesystem addon
+Summary:	Header files for the Allegro 5 memory file-system addon
 Group:		System Environment/Libraries
 Requires:	%{name}-addon-memfile = %{version}-%{release}
 %description addon-memfile-devel
@@ -167,8 +167,8 @@ Requires:	%{name} = %{version}-%{release}
 %description addon-physfs
 This package provides the physfs addon for the Allegro 5 library. This
 addon provides an interface to the PhysicsFS library, allowing you to
-mount virtual file systems (e.g., archives) and access files as if they
-were physically on the file system.
+mount virtual file-systems (e.g., archives) and access files as if they
+were physically on the file-system.
 
 %package addon-physfs-devel
 Summary:	Header files for the Allegro 5 physfs addon
