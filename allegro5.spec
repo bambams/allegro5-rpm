@@ -225,6 +225,50 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %postun -p /sbin/ldconfig
 
+%post addon-acodec -p /sbin/ldconfig
+
+%postun addon-acodec -p /sbin/ldconfig
+
+%post addon-audio -p /sbin/ldconfig
+
+%postun addon-audio -p /sbin/ldconfig
+
+%post addon-color -p /sbin/ldconfig
+
+%postun addon-color -p /sbin/ldconfig
+
+%post addon-dialog -p /sbin/ldconfig
+
+%postun addon-dialog -p /sbin/ldconfig
+
+%post addon-font -p /sbin/ldconfig
+
+%postun addon-font -p /sbin/ldconfig
+
+%post addon-image -p /sbin/ldconfig
+
+%postun addon-image -p /sbin/ldconfig
+
+%post addon-main -p /sbin/ldconfig
+
+%postun addon-main -p /sbin/ldconfig
+
+%post addon-memfile -p /sbin/ldconfig
+
+%postun addon-memfile -p /sbin/ldconfig
+
+%post addon-physfs -p /sbin/ldconfig
+
+%postun addon-physfs -p /sbin/ldconfig
+
+%post addon-primitives -p /sbin/ldconfig
+
+%postun addon-primitives -p /sbin/ldconfig
+
+%post addon-ttf -p /sbin/ldconfig
+
+%postun addon-ttf -p /sbin/ldconfig
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
