@@ -324,6 +324,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/tls.h
 %{_includedir}/allegro5/transformations.h
 %{_includedir}/allegro5/utf8.h
+%doc
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_STREAM.3.gz
