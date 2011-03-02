@@ -5,6 +5,7 @@ RPM_BUILD_ROOT=${HOME}/rpm
 all: build check
 	
 build:
+	rm -fR ${RPM_BUILD_ROOT}/RPMS
 	rpmbuild -ba allegro5.spec
 
 check:
