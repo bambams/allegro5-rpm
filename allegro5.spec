@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -77,22 +77,6 @@ Group:		System Environment/Libraries
 Requires:	%{name}-addon-dialog = %{version}-%{release}
 %description addon-dialog-devel
 This package is required to build programs that use the Allegro 5 dialog
-addon.
-
-%package addon-font
-Summary:	Font addon for the Allegro 5 library
-Group:		System Environment/Libraries
-Requires:	%{name} = %{version}-%{release}
-%description addon-font
-This package provides the font addon for the Allegro 5 library. Provides
-the ability to load fonts into Allegro 5.
-
-%package addon-font-devel
-Summary:	Header files for the Allegro 5 font addon
-Group:		System Environment/Libraries
-Requires:	%{name}-addon-font = %{version}-%{release}
-%description addon-font-devel
-This package is required to build programs that use the Allegro 5 font
 addon.
 
 %package addon-image
@@ -221,10 +205,6 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %postun addon-dialog -p /sbin/ldconfig
 
-%post addon-font -p /sbin/ldconfig
-
-%postun addon-font -p /sbin/ldconfig
-
 %post addon-image -p /sbin/ldconfig
 
 %postun addon-image -p /sbin/ldconfig
@@ -260,6 +240,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro_color.so
 %{_libdir}/liballegro_color.so.5.0
 %{_libdir}/liballegro_color.so.5.0.0
+%{_libdir}/liballegro_font.so
+%{_libdir}/liballegro_font.so.5.0
+%{_libdir}/liballegro_font.so.5.0.0
 
 %files devel
 %{_includedir}/allegro5/alcompat.h
@@ -268,6 +251,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/allegro5.h
 %{_includedir}/allegro5/allegro_color.h
 %{_includedir}/allegro5/allegro_direct3d.h
+%{_includedir}/allegro5/allegro_font.h
 %{_includedir}/allegro5/allegro_opengl.h
 %{_includedir}/allegro5/altime.h
 %{_includedir}/allegro5/base.h
@@ -353,6 +337,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/utf8.h
 %{_libdir}/pkgconfig/allegro-5.0.pc
 %{_libdir}/pkgconfig/allegro_color-5.0.pc
+%{_libdir}/pkgconfig/allegro_font-5.0.pc
 %doc
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
@@ -1094,15 +1079,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/allegro_native_dialog.h
 %{_libdir}/pkgconfig/allegro_dialog-5.0.pc
 
-%files addon-font
-%{_libdir}/liballegro_font.so
-%{_libdir}/liballegro_font.so.5.0
-%{_libdir}/liballegro_font.so.5.0.0
-
-%files addon-font-devel
-%{_includedir}/allegro5/allegro_font.h
-%{_libdir}/pkgconfig/allegro_font-5.0.pc
-
 %files addon-image
 %{_libdir}/liballegro_image.so
 %{_libdir}/liballegro_image.so.5.0
@@ -1157,6 +1133,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-4
+- Merged font packages into core packages.
+
 * Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-3
 - Merged color packages into core packages.
 
