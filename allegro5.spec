@@ -277,7 +277,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro.so
 %{_libdir}/liballegro.so.5.0
 %{_libdir}/liballegro.so.5.0.0
-%{_libdir}/pkgconfig/allegro-5.0.pc
 
 %files devel
 %{_includedir}/allegro5/alcompat.h
@@ -368,6 +367,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/tls.h
 %{_includedir}/allegro5/transformations.h
 %{_includedir}/allegro5/utf8.h
+%{_libdir}/pkgconfig/allegro-5.0.pc
 %doc
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
