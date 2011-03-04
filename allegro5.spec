@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -113,22 +113,6 @@ Requires:	%{name}-addon-physfs = %{version}-%{release}
 This package is required to build programs that use the Allegro 5 physfs
 addon.
 
-%package addon-primitives
-Summary:	Primitives addon for the Allegro 5 library
-Group:		System Environment/Libraries
-Requires:	%{name} = %{version}-%{release}
-%description addon-primitives
-This package provides the primitives addon for the Allegro 5 library.
-This addon provides Allegro 5 routines to draw primitive shapes.
-
-%package addon-primitives-devel
-Summary:	Header files for the Allegro 5 primitives addon
-Group:		System Environment/Libraries
-Requires:	%{name}-addon-primitives = %{version}-%{release}
-%description addon-primitives-devel
-This package is required to build programs that use the Allegro 5
-primitives addon.
-
 %package addon-ttf
 Summary:	TTF addon for the Allegro 5 library
 Group:		System Environment/Libraries
@@ -180,10 +164,6 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %postun addon-physfs -p /sbin/ldconfig
 
-%post addon-primitives -p /sbin/ldconfig
-
-%postun addon-primitives -p /sbin/ldconfig
-
 %post addon-ttf -p /sbin/ldconfig
 
 %postun addon-ttf -p /sbin/ldconfig
@@ -208,6 +188,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro_memfile.so
 %{_libdir}/liballegro_memfile.so.5.0
 %{_libdir}/liballegro_memfile.so.5.0.0
+%{_libdir}/liballegro_primitives.so
+%{_libdir}/liballegro_primitives.so.5.0
+%{_libdir}/liballegro_primitives.so.5.0.0
 
 %files devel
 %{_includedir}/allegro5/alcompat.h
@@ -219,6 +202,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/allegro_font.h
 %{_includedir}/allegro5/allegro_memfile.h
 %{_includedir}/allegro5/allegro_opengl.h
+%{_includedir}/allegro5/allegro_primitives.h
 %{_includedir}/allegro5/altime.h
 %{_includedir}/allegro5/base.h
 %{_includedir}/allegro5/bitmap.h
@@ -306,6 +290,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_font-5.0.pc
 %{_libdir}/pkgconfig/allegro_main-5.0.pc
 %{_libdir}/pkgconfig/allegro_memfile-5.0.pc
+%{_libdir}/pkgconfig/allegro_primitives-5.0.pc
 %doc
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
@@ -1065,15 +1050,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/allegro_physfs.h
 %{_libdir}/pkgconfig/allegro_physfs-5.0.pc
 
-%files addon-primitives
-%{_libdir}/liballegro_primitives.so
-%{_libdir}/liballegro_primitives.so.5.0
-%{_libdir}/liballegro_primitives.so.5.0.0
-
-%files addon-primitives-devel
-%{_includedir}/allegro5/allegro_primitives.h
-%{_libdir}/pkgconfig/allegro_primitives-5.0.pc
-
 %files addon-ttf
 %{_libdir}/liballegro_ttf.so
 %{_libdir}/liballegro_ttf.so.5.0
@@ -1084,6 +1060,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-7
+- Merged primitives addon packages into core packages.
+
 * Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-6
 - Merged memfile addon packages into core packages.
 
