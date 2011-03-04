@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -95,22 +95,6 @@ Requires:	%{name}-addon-image = %{version}-%{release}
 This package is required to build programs that use the Allegro 5 image
 addon.
 
-%package addon-memfile
-Summary:	Memory file-system addon for Allegro 5
-Group:		System Environment/Libraries
-Requires:	%{name} = %{version}-%{release}
-%description addon-memfile
-This package provides the memfile addon for the Allegro 5 library. This
-addon allows you to use Allegro 5 file routines on a memory buffer.
-
-%package addon-memfile-devel
-Summary:	Header files for the Allegro 5 memory file-system addon
-Group:		System Environment/Libraries
-Requires:	%{name}-addon-memfile = %{version}-%{release}
-%description addon-memfile-devel
-This package is required to build programs that use the Allegro 5 memfile
-addon.
-
 %package addon-physfs
 Summary:	Physfs addon for the Allegro 5 library
 Group:		System Environment/Libraries
@@ -192,10 +176,6 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %postun addon-image -p /sbin/ldconfig
 
-%post addon-memfile -p /sbin/ldconfig
-
-%postun addon-memfile -p /sbin/ldconfig
-
 %post addon-physfs -p /sbin/ldconfig
 
 %postun addon-physfs -p /sbin/ldconfig
@@ -225,6 +205,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro_main.so
 %{_libdir}/liballegro_main.so.5.0
 %{_libdir}/liballegro_main.so.5.0.0
+%{_libdir}/liballegro_memfile.so
+%{_libdir}/liballegro_memfile.so.5.0
+%{_libdir}/liballegro_memfile.so.5.0.0
 
 %files devel
 %{_includedir}/allegro5/alcompat.h
@@ -234,6 +217,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/allegro_color.h
 %{_includedir}/allegro5/allegro_direct3d.h
 %{_includedir}/allegro5/allegro_font.h
+%{_includedir}/allegro5/allegro_memfile.h
 %{_includedir}/allegro5/allegro_opengl.h
 %{_includedir}/allegro5/altime.h
 %{_includedir}/allegro5/base.h
@@ -321,6 +305,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_color-5.0.pc
 %{_libdir}/pkgconfig/allegro_font-5.0.pc
 %{_libdir}/pkgconfig/allegro_main-5.0.pc
+%{_libdir}/pkgconfig/allegro_memfile-5.0.pc
 %doc
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
@@ -1071,15 +1056,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/allegro_image.h
 %{_libdir}/pkgconfig/allegro_image-5.0.pc
 
-%files addon-memfile
-%{_libdir}/liballegro_memfile.so
-%{_libdir}/liballegro_memfile.so.5.0
-%{_libdir}/liballegro_memfile.so.5.0.0
-
-%files addon-memfile-devel
-%{_includedir}/allegro5/allegro_memfile.h
-%{_libdir}/pkgconfig/allegro_memfile-5.0.pc
-
 %files addon-physfs
 %{_libdir}/liballegro_physfs.so
 %{_libdir}/liballegro_physfs.so.5.0
@@ -1108,6 +1084,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-6
+- Merged memfile addon packages into core packages.
+
 * Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-5
 - Merged "main" addon packages into core packages.
 
