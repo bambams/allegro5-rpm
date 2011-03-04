@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -61,22 +61,6 @@ Group:		System Environment/Libraries
 Requires:	%{name}-addon-audio = %{version}-%{release}
 %description addon-audio-devel
 This package is required to build programs that use the Allegro 5 audio
-addon.
-
-%package addon-color
-Summary:	Color addon for the Allegro 5 library
-Group:		System Environment/Libraries
-Requires:	%{name} = %{version}-%{release}
-%description addon-color
-This package provides the color addon for the Allegro 5 library. This
-addon allows you to create and convert color formats.
-
-%package addon-color-devel
-Summary:	Header files for the Allegro 5 color addon
-Group:		System Environment/Libraries
-Requires:	%{name}-addon-color = %{version}-%{release}
-%description addon-color-devel
-This package is required to build programs that use the Allegro 5 color
 addon.
 
 %package addon-dialog
@@ -233,10 +217,6 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %postun addon-audio -p /sbin/ldconfig
 
-%post addon-color -p /sbin/ldconfig
-
-%postun addon-color -p /sbin/ldconfig
-
 %post addon-dialog -p /sbin/ldconfig
 
 %postun addon-dialog -p /sbin/ldconfig
@@ -277,12 +257,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro.so
 %{_libdir}/liballegro.so.5.0
 %{_libdir}/liballegro.so.5.0.0
+%{_libdir}/liballegro_color.so
+%{_libdir}/liballegro_color.so.5.0
+%{_libdir}/liballegro_color.so.5.0.0
 
 %files devel
 %{_includedir}/allegro5/alcompat.h
 %{_includedir}/allegro5/alinline.h
 %{_includedir}/allegro5/allegro.h
 %{_includedir}/allegro5/allegro5.h
+%{_includedir}/allegro5/allegro_color.h
 %{_includedir}/allegro5/allegro_direct3d.h
 %{_includedir}/allegro5/allegro_opengl.h
 %{_includedir}/allegro5/altime.h
@@ -368,6 +352,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/transformations.h
 %{_includedir}/allegro5/utf8.h
 %{_libdir}/pkgconfig/allegro-5.0.pc
+%{_libdir}/pkgconfig/allegro_color-5.0.pc
 %doc
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
@@ -1100,15 +1085,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/allegro_audio.h
 %{_libdir}/pkgconfig/allegro_audio-5.0.pc
 
-%files addon-color
-%{_libdir}/liballegro_color.so
-%{_libdir}/liballegro_color.so.5.0
-%{_libdir}/liballegro_color.so.5.0.0
-
-%files addon-color-devel
-%{_includedir}/allegro5/allegro_color.h
-%{_libdir}/pkgconfig/allegro_color-5.0.pc
-
 %files addon-dialog
 %{_libdir}/liballegro_dialog.so
 %{_libdir}/liballegro_dialog.so.5.0
@@ -1181,6 +1157,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-3
+- Merged color packages into core packages.
+
 * Fri Feb 25 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-2
 - Merged doc package into the devel package.
 
