@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	7%{?dist}
+Release:	2%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -1060,23 +1060,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
-* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-7
+* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-2
 - Merged primitives addon packages into core packages.
-
-* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-6
 - Merged memfile addon packages into core packages.
-
-* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-5
 - Merged "main" addon packages into core packages.
-
-* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-4
 - Merged font packages into core packages.
-
-* Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-3
 - Merged color packages into core packages.
-
-* Fri Feb 25 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-2
 - Merged doc package into the devel package.
+- Fixed spelling mistakes.
+- Removed explicit library dependencies.
 
 * Fri Feb 25 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-1
 - Initial version.
