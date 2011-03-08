@@ -198,6 +198,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/liballegro_primitives.so.5.0.0
 
 %files devel
+%defattr(-,root,root,-)
 %{_includedir}/allegro5
 %exclude %{_includedir}/allegro5/allegro_acodec.h
 %exclude %{_includedir}/allegro5/allegro_audio.h
@@ -221,55 +222,67 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/al_*.3*
 
 %files addon-acodec
+%defattr(-,root,root,-)
 %{_libdir}/liballegro_acodec.so.5.0
 %{_libdir}/liballegro_acodec.so.5.0.0
 
 %files addon-acodec-devel
+%defattr(-,root,root,-)
 %{_includedir}/allegro5/allegro_acodec.h
 %{_libdir}/liballegro_acodec.so
 %{_libdir}/pkgconfig/allegro_acodec-5.0.pc
 
 %files addon-audio
+%defattr(-,root,root,-)
 %{_libdir}/liballegro_audio.so.5.0
 %{_libdir}/liballegro_audio.so.5.0.0
 
 %files addon-audio-devel
+%defattr(-,root,root,-)
 %{_includedir}/allegro5/allegro_audio.h
 %{_libdir}/liballegro_audio.so
 %{_libdir}/pkgconfig/allegro_audio-5.0.pc
 
 %files addon-dialog
+%defattr(-,root,root,-)
 %{_libdir}/liballegro_dialog.so.5.0
 %{_libdir}/liballegro_dialog.so.5.0.0
 
 %files addon-dialog-devel
+%defattr(-,root,root,-)
 %{_includedir}/allegro5/allegro_native_dialog.h
 %{_libdir}/liballegro_dialog.so
 %{_libdir}/pkgconfig/allegro_dialog-5.0.pc
 
 %files addon-image
+%defattr(-,root,root,-)
 %{_libdir}/liballegro_image.so.5.0
 %{_libdir}/liballegro_image.so.5.0.0
 
 %files addon-image-devel
+%defattr(-,root,root,-)
 %{_includedir}/allegro5/allegro_image.h
 %{_libdir}/liballegro_image.so
 %{_libdir}/pkgconfig/allegro_image-5.0.pc
 
 %files addon-physfs
+%defattr(-,root,root,-)
 %{_libdir}/liballegro_physfs.so.5.0
 %{_libdir}/liballegro_physfs.so.5.0.0
 
 %files addon-physfs-devel
+%defattr(-,root,root,-)
 %{_includedir}/allegro5/allegro_physfs.h
 %{_libdir}/liballegro_physfs.so
 %{_libdir}/pkgconfig/allegro_physfs-5.0.pc
 
 %files addon-ttf
+%defattr(-,root,root,-)
 %{_libdir}/liballegro_ttf.so.5.0
 %{_libdir}/liballegro_ttf.so.5.0.0
 
 %files addon-ttf-devel
+%defattr(-,root,root,-)
 %{_includedir}/allegro5/allegro_ttf.h
 %{_libdir}/liballegro_ttf.so
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
