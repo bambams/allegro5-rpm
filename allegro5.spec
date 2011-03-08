@@ -7,7 +7,7 @@ Summary:	A game programming library
 Group:		System Environment/Libraries
 License:	zlib
 URL:		http://liballeg.org/
-Source0:	http://downloads.sourceforge.net/project/alleg/allegro/5.0.0/allegro-5.0.0.tar.gz
+Source0:	http://downloads.sourceforge.net/alleg/allegro-5.0.0.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel
