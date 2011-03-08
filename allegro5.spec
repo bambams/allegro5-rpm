@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -288,6 +288,17 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Wed Mar 09 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-3
+- Adding file permissions to subpackages.
+- Moving devel files (namely .so symlinks) to devel packages.
+- Added %doc section proper; readmes, changes, license, etc.
+- Fixed SF.net URI.
+- Modified BuildRequires.
+- Added main devel dependency to subpackage devels.
+- Replaced many al_*.3* manpage files with a glob.
+- Replaced many header files with directory and %exclude macros.
+- Added allegro5.cfg file under /etc/allegro5rc.
+
 * Fri Mar 04 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-2
 - Merged primitives addon packages into core packages.
 - Merged memfile addon packages into core packages.
