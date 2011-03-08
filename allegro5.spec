@@ -45,6 +45,7 @@ This addon allows you to load audio sample formats.
 Summary:	Header files for the Allegro 5 audio codec addon
 Group:		System Environment/Libraries
 Requires:	%{name}-addon-acodec = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 %description addon-acodec-devel
 This package is required to build programs that use the Allegro 5 audio
 codec addon.
@@ -61,6 +62,7 @@ addon allows you to play sounds in your Allegro 5 programs.
 Summary:	Header files for the Allegro 5 audio addon
 Group:		System Environment/Libraries
 Requires:	%{name}-addon-audio = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 %description addon-audio-devel
 This package is required to build programs that use the Allegro 5 audio
 addon.
@@ -77,6 +79,7 @@ addon allows you to show dialog boxes.
 Summary:	Header files for the Allegro 5 dialog addon
 Group:		System Environment/Libraries
 Requires:	%{name}-addon-dialog = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 %description addon-dialog-devel
 This package is required to build programs that use the Allegro 5 dialog
 addon.
@@ -93,6 +96,7 @@ support for loading image file formats.
 Summary:	Header files for the Allegro 5 image addon
 Group:		System Environment/Libraries
 Requires:	%{name}-addon-image = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 %description addon-image-devel
 This package is required to build programs that use the Allegro 5 image
 addon.
@@ -127,6 +131,7 @@ allows you to load and use TTF fonts in your Allegro 5 programs.
 Summary:	Header files for the Allegro 5 TTF addon
 Group:		System Environment/Libraries
 Requires:	%{name}-addon-ttf = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 %description addon-ttf-devel
 This package is required to build programs that use the Allegro 5 ttf
 addon.
