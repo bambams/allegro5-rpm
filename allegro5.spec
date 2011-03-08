@@ -183,22 +183,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %config(noreplace) %{_sysconfdir}/allegro5rc
-%{_libdir}/liballegro.so
 %{_libdir}/liballegro.so.5.0
 %{_libdir}/liballegro.so.5.0.0
-%{_libdir}/liballegro_color.so
 %{_libdir}/liballegro_color.so.5.0
 %{_libdir}/liballegro_color.so.5.0.0
-%{_libdir}/liballegro_font.so
 %{_libdir}/liballegro_font.so.5.0
 %{_libdir}/liballegro_font.so.5.0.0
-%{_libdir}/liballegro_main.so
 %{_libdir}/liballegro_main.so.5.0
 %{_libdir}/liballegro_main.so.5.0.0
-%{_libdir}/liballegro_memfile.so
 %{_libdir}/liballegro_memfile.so.5.0
 %{_libdir}/liballegro_memfile.so.5.0.0
-%{_libdir}/liballegro_primitives.so
 %{_libdir}/liballegro_primitives.so.5.0
 %{_libdir}/liballegro_primitives.so.5.0.0
 
@@ -295,6 +289,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/allegro5/tls.h
 %{_includedir}/allegro5/transformations.h
 %{_includedir}/allegro5/utf8.h
+%{_libdir}/liballegro.so
+%{_libdir}/liballegro_color.so
+%{_libdir}/liballegro_font.so
+%{_libdir}/liballegro_main.so
+%{_libdir}/liballegro_memfile.so
+%{_libdir}/liballegro_primitives.so
 %{_libdir}/pkgconfig/allegro-5.0.pc
 %{_libdir}/pkgconfig/allegro_color-5.0.pc
 %{_libdir}/pkgconfig/allegro_font-5.0.pc
@@ -1016,57 +1016,57 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/al_wait_for_vsync.3.gz
 
 %files addon-acodec
-%{_libdir}/liballegro_acodec.so
 %{_libdir}/liballegro_acodec.so.5.0
 %{_libdir}/liballegro_acodec.so.5.0.0
 
 %files addon-acodec-devel
 %{_includedir}/allegro5/allegro_acodec.h
+%{_libdir}/liballegro_acodec.so
 %{_libdir}/pkgconfig/allegro_acodec-5.0.pc
 
 %files addon-audio
-%{_libdir}/liballegro_audio.so
 %{_libdir}/liballegro_audio.so.5.0
 %{_libdir}/liballegro_audio.so.5.0.0
 
 %files addon-audio-devel
 %{_includedir}/allegro5/allegro_audio.h
+%{_libdir}/liballegro_audio.so
 %{_libdir}/pkgconfig/allegro_audio-5.0.pc
 
 %files addon-dialog
-%{_libdir}/liballegro_dialog.so
 %{_libdir}/liballegro_dialog.so.5.0
 %{_libdir}/liballegro_dialog.so.5.0.0
 
 %files addon-dialog-devel
 %{_includedir}/allegro5/allegro_native_dialog.h
+%{_libdir}/liballegro_dialog.so
 %{_libdir}/pkgconfig/allegro_dialog-5.0.pc
 
 %files addon-image
-%{_libdir}/liballegro_image.so
 %{_libdir}/liballegro_image.so.5.0
 %{_libdir}/liballegro_image.so.5.0.0
 
 %files addon-image-devel
 %{_includedir}/allegro5/allegro_image.h
+%{_libdir}/liballegro_image.so
 %{_libdir}/pkgconfig/allegro_image-5.0.pc
 
 %files addon-physfs
-%{_libdir}/liballegro_physfs.so
 %{_libdir}/liballegro_physfs.so.5.0
 %{_libdir}/liballegro_physfs.so.5.0.0
 
 %files addon-physfs-devel
 %{_includedir}/allegro5/allegro_physfs.h
+%{_libdir}/liballegro_physfs.so
 %{_libdir}/pkgconfig/allegro_physfs-5.0.pc
 
 %files addon-ttf
-%{_libdir}/liballegro_ttf.so
 %{_libdir}/liballegro_ttf.so.5.0
 %{_libdir}/liballegro_ttf.so.5.0.0
 
 %files addon-ttf-devel
 %{_includedir}/allegro5/allegro_ttf.h
+%{_libdir}/liballegro_ttf.so
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
