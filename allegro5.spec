@@ -183,6 +183,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %config(noreplace) %{_sysconfdir}/allegro5rc
+%doc CHANGES-5.0.txt CONTRIBUTORS.txt LICENSE.txt README.txt
 %{_libdir}/liballegro.so.5.0
 %{_libdir}/liballegro.so.5.0.0
 %{_libdir}/liballegro_color.so.5.0
@@ -301,7 +302,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_main-5.0.pc
 %{_libdir}/pkgconfig/allegro_memfile-5.0.pc
 %{_libdir}/pkgconfig/allegro_primitives-5.0.pc
-%doc
 %{_mandir}/man3/ALLEGRO_AUDIO_DEPTH.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_PAN_NONE.3.gz
 %{_mandir}/man3/ALLEGRO_AUDIO_STREAM.3.gz
