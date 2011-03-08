@@ -146,6 +146,8 @@ make %{?_smp_mflags}
 %install
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
+mkdir %buildroot/%{_sysconfdir}
+mv allegro5.cfg %buildroot/%{_sysconfdir}/allegro5rc
 
 %post -p /sbin/ldconfig
 
@@ -180,6 +182,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
+%config(noreplace) %{_sysconfdir}/allegro5rc
 %{_libdir}/liballegro.so
 %{_libdir}/liballegro.so.5.0
 %{_libdir}/liballegro.so.5.0.0
