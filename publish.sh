@@ -30,15 +30,12 @@ fi
 
 version=`grep -A 1 changelog allegro5.spec |
         tail -n 1 |
-        sed -r 's,.*([0-9]+\.[0-9]+\.[0-9]+),\1,'`
-
-major_version=`echo $version |
-        sed -r 's,([0-9]+)\.[0-9]+\.[0-9]+,\1,'`
+        sed -r 's,.*([0-9]+\.[0-9]+\.[0-9]+-[0-9]+),\1,'`
 
 dest="castopulence.org:/var/www/rpm/allegro5/$version"
 
 spec=allegro5.spec
-srpm="allegro5-5.0.0-$major_version.fc13.src.rpm"
+srpm="allegro5-$version.fc13.src.rpm"
 sha1="$root/SHA1SUM"
 
 echo "Publishing $version to $dest..."
