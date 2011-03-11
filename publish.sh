@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-root=${1:-$HOME/src/allegro/rpm}
+root=${1:-$HOME/src/allegro/5-rpm}
 rpm_tree=${2:-$HOME/rpm}
 other_rpm_tree="`echo $rpm_tree | sed -r 's,\brpm\b,rpmbuild,'`"
 

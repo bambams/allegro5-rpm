@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-root=${1:-$HOME/src/allegro/rpm}
+root=${1:-$HOME/src/allegro/5-rpm}
 rpm_tree=${2:-$HOME/rpm}
 src_path="$rpm_tree/SOURCES/allegro-5.0.0.tar.gz"
 src_sha1=7a6c7bf63d65b0e76ec6daf7e09e293fdfc8c137
