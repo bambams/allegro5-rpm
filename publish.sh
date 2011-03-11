@@ -32,13 +32,14 @@ version=`grep -A 1 changelog allegro5.spec |
         tail -n 1 |
         sed -r 's,.*([0-9]+\.[0-9]+\.[0-9]+-[0-9]+),\1,'`
 
-dest="castopulence.org:/var/www/rpm/allegro5/$version"
+remote=castopulence.org
+dest="/var/www/rpm/allegro5/$version/"
 
 spec=allegro5.spec
 srpm="allegro5-$version.fc13.src.rpm"
 sha1="$root/SHA1SUM"
 
-echo "Publishing $version to $dest..."
+echo "Publishing $version to $host:$dest..."
 read -p "Continue (Y/n) " answer
 
 if [ "$answer" != y -a "$answer" != Y ]; then
@@ -78,8 +79,9 @@ fi
         (cd "$rpm_tree/SRPMS" &&
         /usr/bin/sha1sum "$srpm" 1>"$sha1") &&
         /usr/bin/sha1sum "$spec" 1>>"$sha1" &&
-        /usr/bin/scp "$sha1" "$dest" &&
-        /usr/bin/scp "$spec" "$dest" &&
+        /usr/bin/ssh "$remote" /bin/mkdir -p "$dest"
+        /usr/bin/scp "$sha1" "$remote:$dest" &&
+        /usr/bin/scp "$spec" "$remote:$dest" &&
         (cd "$rpm_tree/SRPMS" &&
-        /usr/bin/scp "$srpm" "$dest")
+        /usr/bin/scp "$srpm" "$remote:$dest")
 
