@@ -75,8 +75,13 @@ if [ ! -d "$rpm_tree" ]; then
     exit 1
 fi
 
-/usr/bin/make &&
-        (cd "$rpm_tree/SRPMS" &&
+read -p "Rebuild? (Y/n) [n] " answer;
+
+if [ "$answer" == y -o "$answer" == Y ]; then
+    /usr/bin/make
+fi
+
+(cd "$rpm_tree/SRPMS" &&
         /usr/bin/sha1sum "$srpm" 1>"$sha1") &&
         /usr/bin/sha1sum "$spec" 1>>"$sha1" &&
         /usr/bin/ssh "$remote" /bin/mkdir -p "$dest"
