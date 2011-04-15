@@ -1,7 +1,19 @@
 This project is intended to provide and maintain an RPM package for
-version 5 of the Allegro game programming library. I'm new to RPM so it
-will probably be slow going trying to get an RPM made, but hopefully I'll
-learn something in the process. Contributors are very welcome!
+version 5 of the Allegro game programming library. We've made it into
+Fedora 13 and 14; and should soon be in Fedora 15 as well.
+
+== Installing Allegro 5 in Fedora ==
+
+If you're just trying to install Allegro 5 in Fedora then you've probably
+come to the wrong place. This project is for maintaining the RPM
+package(s) that are built for Allegro 5 in Fedora. At this time we've
+gotten the package into the stable updates repository for Fedora 13 and
+Fedora 14. If you're using either of these releases of Fedora then you
+should be able to install Allegro by following the directions here:
+
+http://www.allegro.cc/forums/thread/607029/
+
+== The RPM ==
 
 The way that I'm currently organizing this:
 
@@ -35,6 +47,4 @@ directory.
 Or, just execute the included init.sh script, which will do all
 of these things for you. I've tried to make it as smart and safe as
 possible, but it might still do "damage" so USE AT OWN RISK.
-
-We can now build the SRPM and RPMs, but none of them have been tested yet.
 
