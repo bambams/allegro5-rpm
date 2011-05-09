@@ -140,7 +140,7 @@ addon.
 %setup -n allegro-5.0.0 -q
 
 %build
-%cmake -DMANDIR=%{_mandir} .
+%cmake -DWANT_DOCS=OFF .
 make %{?_smp_mflags}
 
 %install
