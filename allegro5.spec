@@ -203,6 +203,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(-,root,root,-)
+%doc docs/html/refman
 %{_includedir}/allegro5
 %exclude %{_includedir}/allegro5/allegro_acodec.h
 %exclude %{_includedir}/allegro5/allegro_audio.h
