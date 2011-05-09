@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -14,7 +14,7 @@ BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel
 BuildRequires:	gtk2-devel libjpeg-devel libpng-devel libvorbis-devel
 BuildRequires:	libXext-devel libXxf86vm-devel libXrandr-devel
 BuildRequires:	libXinerama-devel libXpm-devel mesa-libGL-devel
-BuildRequires:	mesa-libGLU-devel openal-soft-devel pandoc physfs-devel
+BuildRequires:	mesa-libGLU-devel openal-soft-devel physfs-devel
 BuildRequires:	pulseaudio-libs-devel
 
 %description
@@ -148,6 +148,10 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 mkdir %buildroot/%{_sysconfdir}
 mv allegro5.cfg %buildroot/%{_sysconfdir}/allegro5rc
+
+# install man pages
+mkdir -p $RPM_BUILD_ROOT%{_mandir}/man3
+install -p -m 644 docs/man/*.3 $RPM_BUILD_ROOT%{_mandir}/man3
 
 %post -p /sbin/ldconfig
 
@@ -288,6 +292,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Mon May 09 2011 Dan Horák <dan[at]danny.cz> 5.0.0-4
+- Use prebuilt man pages
+
 * Wed Mar 09 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-3
 - Adding file permissions to subpackages.
 - Moving devel files (namely .so symlinks) to devel packages.
