@@ -1,7 +1,7 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
 Version:	5.0.0
-Release:	5%{?dist}
+Release:	4%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
@@ -293,12 +293,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
-* Mon May 09 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-5
-- Added HTML reference manual.
+* Mon May 09 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-4
+- From Dan Horák to fix #703154.
 - Explicitly disabled documentation generation.
-
-* Mon May 09 2011 Dan Horák <dan[at]danny.cz> 5.0.0-4
 - Use prebuilt man pages
+- Added HTML reference manual.
 
 * Wed Mar 09 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-3
 - Adding file permissions to subpackages.
