@@ -1,6 +1,6 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
-Version:	5.0.3
+Version:	5.0.6
 Release:	4%{?dist}
 Summary:	A game programming library
 
