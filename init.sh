@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-root=${1:-$HOME/src/allegro/5-rpm}
-rpm_tree=${2:-$HOME/rpm}
-src_path="$rpm_tree/SOURCES/allegro-5.0.0.tar.gz"
-src_sha1=7a6c7bf63d65b0e76ec6daf7e09e293fdfc8c137
-src_url=http://downloads.sourceforge.net/project/alleg/allegro/5.0.0/allegro-5.0.0.tar.gz
+root="${1:-$HOME/src/allegro/5-rpm}"
+rpm_tree="${2:-$HOME/rpm}"
+version="`./parse-version 2>/dev/null`"
+tarball="allegro-${version}.tar.gz";
 
 if [ "`echo $root | grep '^/'`" != "$root" -o $? != 0 ]; then
     echo "Your project root path '$root' doesn't appear to be " 1>&2
@@ -47,8 +46,7 @@ if [ ! -d "$rpm_tree" ]; then
     echo "Failed to find '$rpm_tree' tree... Trying 'rpmbuild'..." 1>&2
     echo "In the future you can save time by specifying the rpm " 1>&2
     echo "build tree as the second argument to this script." 1>&2
-    "$0" "$root" "`echo $rpm_tree | sed -r 's,\brpm\b,rpmbuild,'`"
-    exit $?
+    exec "$0" "$root" "`echo $rpm_tree | sed -r 's,\brpm\b,rpmbuild,'`"
 fi
 
 echo "Creating .spec symlinks in '$rpm_tree/SPECS'..."
@@ -56,22 +54,5 @@ for f in $root/*.spec; do
     /bin/ln -fs "$f" "$rpm_tree/SPECS/"
 done
 
-if [ -f "$src_path" ]; then
-    echo "Source tarball exists... Checking SHA1..."
-    if [ `/usr/bin/sha1sum "$src_path" | sed -r 's/^([^ ]*).*/\1/'` == "$src_sha1" ]; then
-        echo "SHA1 matches..."
-        skip_src=1
-    else
-        echo "SHA1 doesn't match..."
-        read -p "Would you like me to fetch the source for you? (Y/n) " answer
-        if [ "$answer" != y -a "$answer" != Y ]; then
-            skip_src=1
-        fi
-    fi
-fi
-
-if [ ! "$skip_src" == 1 ]; then
-    echo "Fetching source tarball..."
-    /usr/bin/wget -O "$src_path" "$src_url"
-fi
+./fetch-src
 
