@@ -1,0 +1,11 @@
+diff -up allegro-5.0.3/addons/image/png.c.fix allegro-5.0.3/addons/image/png.c
+--- allegro-5.0.3/addons/image/png.c.fix	2011-12-09 14:41:00.820972675 -0500
++++ allegro-5.0.3/addons/image/png.c	2011-12-09 14:41:08.491898729 -0500
+@@ -4,6 +4,7 @@
+ 
+ 
+ #include <png.h>
++#include <zlib.h>
+ 
+ #include "allegro5/allegro.h"
+ #include "allegro5/allegro_image.h"

@@ -1,13 +1,14 @@
 # vim: noexpandtab textwidth=74
 Name:		allegro5
-Version:	5.0.0
+Version:	5.0.3
 Release:	4%{?dist}
 Summary:	A game programming library
 
 Group:		System Environment/Libraries
 License:	zlib
 URL:		http://liballeg.org/
-Source0:	http://downloads.sourceforge.net/alleg/allegro-5.0.0.tar.gz
+Source0:	http://downloads.sourceforge.net/alleg/allegro-%{version}.tar.gz
+Patch0:		allegro-5.0.3-png15.patch
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel
@@ -137,7 +138,8 @@ This package is required to build programs that use the Allegro 5 ttf
 addon.
 
 %prep
-%setup -n allegro-5.0.0 -q
+%setup -n allegro-%{version} -q
+%patch0 -p1 -b .png15
 
 %build
 %cmake -DWANT_DOCS=OFF .
@@ -189,17 +191,17 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/allegro5rc
 %doc CHANGES-5.0.txt CONTRIBUTORS.txt LICENSE.txt README.txt
 %{_libdir}/liballegro.so.5.0
-%{_libdir}/liballegro.so.5.0.0
+%{_libdir}/liballegro.so.%{version}
 %{_libdir}/liballegro_color.so.5.0
-%{_libdir}/liballegro_color.so.5.0.0
+%{_libdir}/liballegro_color.so.%{version}
 %{_libdir}/liballegro_font.so.5.0
-%{_libdir}/liballegro_font.so.5.0.0
+%{_libdir}/liballegro_font.so.%{version}
 %{_libdir}/liballegro_main.so.5.0
-%{_libdir}/liballegro_main.so.5.0.0
+%{_libdir}/liballegro_main.so.%{version}
 %{_libdir}/liballegro_memfile.so.5.0
-%{_libdir}/liballegro_memfile.so.5.0.0
+%{_libdir}/liballegro_memfile.so.%{version}
 %{_libdir}/liballegro_primitives.so.5.0
-%{_libdir}/liballegro_primitives.so.5.0.0
+%{_libdir}/liballegro_primitives.so.%{version}
 
 %files devel
 %defattr(-,root,root,-)
@@ -229,7 +231,7 @@ rm -rf $RPM_BUILD_ROOT
 %files addon-acodec
 %defattr(-,root,root,-)
 %{_libdir}/liballegro_acodec.so.5.0
-%{_libdir}/liballegro_acodec.so.5.0.0
+%{_libdir}/liballegro_acodec.so.%{version}
 
 %files addon-acodec-devel
 %defattr(-,root,root,-)
@@ -240,7 +242,7 @@ rm -rf $RPM_BUILD_ROOT
 %files addon-audio
 %defattr(-,root,root,-)
 %{_libdir}/liballegro_audio.so.5.0
-%{_libdir}/liballegro_audio.so.5.0.0
+%{_libdir}/liballegro_audio.so.%{version}
 
 %files addon-audio-devel
 %defattr(-,root,root,-)
@@ -251,7 +253,7 @@ rm -rf $RPM_BUILD_ROOT
 %files addon-dialog
 %defattr(-,root,root,-)
 %{_libdir}/liballegro_dialog.so.5.0
-%{_libdir}/liballegro_dialog.so.5.0.0
+%{_libdir}/liballegro_dialog.so.%{version}
 
 %files addon-dialog-devel
 %defattr(-,root,root,-)
@@ -262,7 +264,7 @@ rm -rf $RPM_BUILD_ROOT
 %files addon-image
 %defattr(-,root,root,-)
 %{_libdir}/liballegro_image.so.5.0
-%{_libdir}/liballegro_image.so.5.0.0
+%{_libdir}/liballegro_image.so.%{version}
 
 %files addon-image-devel
 %defattr(-,root,root,-)
@@ -273,7 +275,7 @@ rm -rf $RPM_BUILD_ROOT
 %files addon-physfs
 %defattr(-,root,root,-)
 %{_libdir}/liballegro_physfs.so.5.0
-%{_libdir}/liballegro_physfs.so.5.0.0
+%{_libdir}/liballegro_physfs.so.%{version}
 
 %files addon-physfs-devel
 %defattr(-,root,root,-)
@@ -284,7 +286,7 @@ rm -rf $RPM_BUILD_ROOT
 %files addon-ttf
 %defattr(-,root,root,-)
 %{_libdir}/liballegro_ttf.so.5.0
-%{_libdir}/liballegro_ttf.so.5.0.0
+%{_libdir}/liballegro_ttf.so.%{version}
 
 %files addon-ttf-devel
 %defattr(-,root,root,-)
@@ -293,6 +295,18 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/pkgconfig/allegro_ttf-5.0.pc
 
 %changelog
+* Thu Jan 12 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 5.0.3-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
+* Fri Dec  9 2011 Tom Callaway <spot@fedoraproject.org> - 5.0.3-3
+- fix for png15
+
+* Tue Dec 06 2011 Adam Jackson <ajax@redhat.com> - 5.0.3-2
+- Rebuild for new libpng
+
+* Thu Jul 07 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.3-1
+- Updating to 5.0.3.
+
 * Mon May 09 2011 Brandon McCaig <bamccaig@gmail.com> 5.0.0-4
 - From Dan Horák to fix #703154.
 - Explicitly disabled documentation generation.
