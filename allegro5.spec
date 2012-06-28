@@ -8,7 +8,7 @@ Group:		System Environment/Libraries
 License:	zlib
 URL:		http://liballeg.org/
 Source0:	http://downloads.sourceforge.net/alleg/allegro-%{version}.tar.gz
-Patch0:		allegro-5.0.3-png15.patch
+#Patch0:		allegro-5.0.3-png15.patch
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 BuildRequires:	alsa-lib-devel cmake dumb-devel flac-devel freetype-devel
@@ -139,7 +139,7 @@ addon.
 
 %prep
 %setup -n allegro-%{version} -q
-%patch0 -p1 -b .png15
+#%patch0 -p1 -b .png15
 
 %build
 %cmake -DWANT_DOCS=OFF .
